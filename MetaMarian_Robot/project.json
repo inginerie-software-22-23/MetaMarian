@@ -4,6 +4,7 @@
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.16.0]",
+    "UiPath.Mail.Activities": "[1.18.1]",
     "UiPath.System.Activities": "[22.10.3]",
     "UiPath.Testing.Activities": "[22.10.0]",
     "UiPath.UIAutomation.Activities": "[22.10.3]"
@@ -82,6 +83,12 @@
         "testCaseType": "TestCase",
         "executionTemplateType": "Local",
         "fileName": "Tests\\WorkflowTestCaseTemplate.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "d36fa2b2-46a9-4e26-9450-9a0daa52b578",
+        "testCaseType": "TestCase",
+        "fileName": "Tests\\TestCase_story3.xaml"
       }
     ],
     "modernBehavior": true
