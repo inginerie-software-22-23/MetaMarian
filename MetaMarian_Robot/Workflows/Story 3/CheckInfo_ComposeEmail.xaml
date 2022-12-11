@@ -1,6 +1,8 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.out_errorCode="0" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="out_errorCode" Type="InArgument(x:Int32)" />
+    <x:Property Name="out_errorCode" Type="OutArgument(x:Int32)" />
+    <x:Property Name="out_emailAddress" Type="OutArgument(x:String)" />
+    <x:Property Name="out_responseEmail" Type="OutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -99,15 +101,13 @@
       <Variable x:TypeArguments="snm:MailMessage" Name="email" />
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="emails" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="employeesEmails" />
-      <Variable x:TypeArguments="x:String" Name="responseEmail" />
-      <Variable x:TypeArguments="x:String" Name="emailAddress" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="mariadutu.d@gmail.com" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="627.3333333333334,32" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[emails]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="gajakzrcnetftals" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="30" />
+    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="ishrtest22@gmail.com" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="627.3333333333334,32" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[emails]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="plxyiqswmmixkhwl" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="30" />
     <Assign sap:VirtualizedContainerService.HintSize="627.3333333333334,72" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="snm:MailMessage">[email]</OutArgument>
@@ -116,12 +116,12 @@
         <InArgument x:TypeArguments="snm:MailMessage">[emails(0)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetEmployeesEmails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="627.3333333333334,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="GetEmployeesEmails.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetEmployeesEmails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="627.3333333333334,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows/Story 3/GetEmployeesEmails.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="outEmployeesEmails">[employeesEmails]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckSender.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="627.3333333333334,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CheckSender.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckSender.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="627.3333333333334,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows/Story 3/CheckSender.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="scg:List(x:String)" x:Key="inEmployeesEmails">[employeesEmails]</InArgument>
         <InOutArgument x:TypeArguments="x:Int32" x:Key="inOutErrorCode">[out_errorCode]</InOutArgument>
@@ -148,7 +148,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckDate.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="482.6666666666667,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="CheckDate.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckDate.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="482.6666666666667,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Workflows/Story 3/CheckDate.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="snm:MailMessage" x:Key="inMail">[email]</InArgument>
               <InOutArgument x:TypeArguments="x:Int32" x:Key="inOutErrorCode">[out_errorCode]</InOutArgument>
@@ -174,7 +174,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckAttachments.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="CheckAttachments.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckAttachments.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Workflows/Story 3/CheckAttachments.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InOutArgument x:TypeArguments="x:Int32" x:Key="inOutErrorCode">[out_errorCode]</InOutArgument>
                     <InArgument x:TypeArguments="snm:MailMessage" x:Key="inEmail">[email]</InArgument>
@@ -186,12 +186,20 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ComposeMail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="627.3333333333334,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="ComposeEmail.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ComposeEmail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="627.3333333333334,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Workflows/Story 3/ComposeEmail.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:Int32" x:Key="inErrorCode">[out_errorCode]</InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="outText">[responseEmail]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="receiverEmailAddress">[emailAddress]</OutArgument>
-        <InArgument x:TypeArguments="snm:MailMessage" x:Key="inEmail">[email]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="inErrorCode">
+          <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="out_errorCode" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="outText">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_responseEmail" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="receiverEmailAddress">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_emailAddress" />
+        </OutArgument>
+        <InArgument x:TypeArguments="snm:MailMessage" x:Key="inEmail">
+          <VisualBasicValue x:TypeArguments="snm:MailMessage" ExpressionText="email" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="627.3333333333334,306" sap2010:WorkflowViewState.IdRef="CommentOut_1">
@@ -202,7 +210,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="338,95.33333333333333" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[responseEmail]" />
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="338,95.33333333333333" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[out_responseEmail]" />
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>

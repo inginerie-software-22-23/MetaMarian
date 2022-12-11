@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>840.8,604</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1596,1185.3333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ComposeMail_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -72,7 +72,7 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ComposeMail" sap:VirtualizedContainerService.HintSize="559.2,539.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ComposeMail" sap:VirtualizedContainerService.HintSize="558.6666666666666,689.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="receiverName" />
     </Sequence.Variables>
@@ -81,7 +81,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="496.8,69.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+    <Assign sap:VirtualizedContainerService.HintSize="496.6666666666667,72" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[receiverEmailAddress]</OutArgument>
       </Assign.To>
@@ -89,7 +89,7 @@
         <InArgument x:TypeArguments="x:String">[inEmail.Sender.Address]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="496.8,69.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign sap:VirtualizedContainerService.HintSize="496.6666666666667,72" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[receiverName]</OutArgument>
       </Assign.To>
@@ -97,8 +97,8 @@
         <InArgument x:TypeArguments="x:String">[inEmail.Sender.DisplayName]</InArgument>
       </Assign.Value>
     </Assign>
-    <Switch x:TypeArguments="x:Int32" DisplayName="Switch" Expression="[inErrorCode]" sap:VirtualizedContainerService.HintSize="496.8,196.8" sap2010:WorkflowViewState.IdRef="Switch`1_1">
-      <Assign x:Key="1" sap:VirtualizedContainerService.HintSize="262.4,69.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Switch x:TypeArguments="x:Int32" DisplayName="Switch" Expression="[inErrorCode]" sap:VirtualizedContainerService.HintSize="496.6666666666667,343.3333333333333" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+      <Assign x:Key="1" sap:VirtualizedContainerService.HintSize="262,72" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[outText]</OutArgument>
         </Assign.To>
@@ -106,7 +106,7 @@
           <InArgument x:TypeArguments="x:String">["Hello " + receiverName + "," + vbNewLine + "This email address is intended only for new employees!"]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign x:Key="2" sap:VirtualizedContainerService.HintSize="262.4,69.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign x:Key="2" sap:VirtualizedContainerService.HintSize="262,72" sap2010:WorkflowViewState.IdRef="Assign_2">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[outText]</OutArgument>
         </Assign.To>
@@ -114,12 +114,20 @@
           <InArgument x:TypeArguments="x:String">["Hello " + receiverName + "," + vbNewLine + "This email wasn't sent on time. The deadline has passed!"]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign x:Key="3" sap:VirtualizedContainerService.HintSize="262.4,69.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign x:Key="3" sap:VirtualizedContainerService.HintSize="262,72" sap2010:WorkflowViewState.IdRef="Assign_3">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[outText]</OutArgument>
         </Assign.To>
         <Assign.Value>
           <InArgument x:TypeArguments="x:String">["Hello " + receiverName + "," + vbNewLine + "This email should have had a pdf attached! Either the attached file is not a pdf, or there are no attachmets."]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="0" sap:VirtualizedContainerService.HintSize="262,72" sap2010:WorkflowViewState.IdRef="Assign_6">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[outText]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["Hello " + receiverName + "," + vbNewLine + "All good!"]</InArgument>
         </Assign.Value>
       </Assign>
     </Switch>
