@@ -91,7 +91,7 @@
         "fileName": "Tests\\TestCase_story3.xaml"
       }
     ],
-    "modernBehavior": true
+    "modernBehavior": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [

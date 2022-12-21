@@ -20585,19 +20585,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cosmin.oanea\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Ionut\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "MetaMarian_Robot",
       "projectName": "MetaMarian_Robot",
-      "projectPath": "C:\\Users\\cosmin.oanea\\Documents\\IS\\MetaMarian\\MetaMarian_Robot\\.local",
-      "packagesPath": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cosmin.oanea\\Documents\\IS\\MetaMarian\\MetaMarian_Robot\\.local",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ]
+      "projectPath": "C:\\Users\\Ionut\\Desktop\\RPA\\Project\\MetaMarian\\MetaMarian_Robot\\.local",
+      "packagesPath": "C:\\Users\\Ionut\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ionut\\Desktop\\RPA\\Project\\MetaMarian\\MetaMarian_Robot\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {
@@ -20628,7 +20624,7 @@
             "version": "[22.10.3, 22.10.3]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\cosmin.oanea\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Ionut\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
