@@ -1,4 +1,4 @@
-name: Integrationn workflow
+name: Integration workflow
 
 on:
   push:
