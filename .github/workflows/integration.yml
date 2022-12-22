@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - integration
+      - test_pipeline # TODO: remove 
 
 # Here the environment variable is declared in workflow level
 env:
@@ -24,14 +25,14 @@ jobs:
         run: |
           echo "Home: ${HOME}"
           echo "This worked!"
-        # echo "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}"
-          # echo "GITHUB_ACTIONS: ${GITHUB_ACTIONS}"
-          # echo "GITHUB_ACTOR: ${GITHUB_ACTOR}"
-          # echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
-          # echo "GITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"
-          # echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
-          # echo "GITHUB_SHA: ${GITHUB_SHA}"
-          # echo "GITHUB_REF: ${GITHUB_REF}"
+          echo "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}"
+          echo "GITHUB_ACTIONS: ${GITHUB_ACTIONS}"
+          echo "GITHUB_ACTOR: ${GITHUB_ACTOR}"
+          echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
+          echo "GITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"
+          echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
+          echo "GITHUB_SHA: ${GITHUB_SHA}"
+          echo "GITHUB_REF: ${GITHUB_REF}"
 
   # clean-previous:
   #   runs-on: ubuntu-latest
