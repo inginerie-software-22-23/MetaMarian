@@ -1,0 +1,88 @@
+name: Integration workflow
+
+on:
+  push:
+    branches:
+      - integration
+
+# Here the environment variable is declared in workflow level
+env:
+  # PROJECT_NAME: uipath.github.action 
+  # PROJECT_FOLDER: ${{ github.action_path }}
+  ORCH_URL: "https://cloud.uipath.com/"
+  ORCH_TENANT: ${{ secrets.UIPATHTENANTNAME }}
+  ORCH_FOLDER: "Shared" 
+  ORCH_CLIENT_ID: ${{ secrets.UIPATHCLIENTID }}
+  ORCH_USER_KEY: ${{ secrets.UIPATHUSERKEY }}
+  ORCH_LOGICAL_NAME: "tudorcosminfoundation"
+  ORCH_ACC_NAME: ${{ secrets.UIPATHACCOUNTNAME }}
+  OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID}}
+  OAUTH_CLIENT_SCOPES: ${{ secrets.OAUTH_CLIENT_SCOPES}}
+  OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET}}
+
+jobs:
+  print-details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo-default-env-variables
+        run: |
+          echo "Home: ${HOME}"
+          echo "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}"
+          echo "GITHUB_ACTIONS: ${GITHUB_ACTIONS}"
+          echo "GITHUB_ACTOR: ${GITHUB_ACTOR}"
+          echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
+          echo "GITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"
+          echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
+          echo "GITHUB_SHA: ${GITHUB_SHA}"
+          echo "GITHUB_REF: ${GITHUB_REF}"
+
+  # clean-previous:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Runner workspace path
+  #       run: |
+  #         echo "Cleaning up previous run"
+  #         rm -rf "${{ github.workspace }}"
+
+  remove-old-artifacts:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+    - name: Remove old artifacts
+      uses: c-hive/gha-remove-artifacts@v1
+      with:
+        age: '1 month'        
+
+  build: 
+    runs-on: windows-2019
+    needs: remove-old-artifacts
+    steps:            
+      # Checkout code from this repo
+      - name: Checkout Code
+        uses: actions/checkout@v3    
+
+      # The UiPath CLI is installed on Runner
+      - name: Setup UiPath CLI
+        uses: Mikael-RnD/setup-uipath@main
+        with:
+          version: 1.0.7985.19721
+
+       # Action for packing UiPath projects in a repository
+      - name: UiPath Pack
+        uses: Mikael-RnD/UiPath-Pack@main
+        with:
+          orchestratorUrl: env.ORCH_URL
+          orchestratorTenant: env.ORCH_TENANT
+          orchestratorFolder: env.ORCH_FOLDER
+          orchestratorApplicationId: env.OAUTH_CLIENT_ID
+          orchestratorApplicationSecret: env.OAUTH_CLIENT_SECRET
+          orchestratorApplicationScope: env.OAUTH_CLIENT_SCOPES
+          orchestratorLogicalName: env.ORCH_LOGICAL_NAME
+          projectVersion: 1.0.8    # TODO: use tags 
+      - run: echo ${{ steps.pack.outputs.packagesPath }}
+      # Upload packages as build artifacts to be handled by deploy job
+      - uses: actions/upload-artifact@v3
+        with:
+          path: ${{ steps.pack.outputs.packagesPath }} #${{ github.workspace }}\packages
+          if-no-files-found: error
+          retention-days: 90
