@@ -63,7 +63,9 @@ jobs:
 
       # The UiPath CLI is installed on Runner
       - name: Setup UiPath CLI
-        uses: Mikael-RnD/UiPath-Setup-JS@main
+        uses: Mikael-RnD/setup-uipath@main
+        with:
+          version: 1.0.7985.19721
 
        # Action for packing UiPath projects in a repository
       - name: UiPath Pack
