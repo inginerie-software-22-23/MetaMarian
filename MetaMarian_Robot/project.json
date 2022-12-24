@@ -89,6 +89,13 @@
         "testCaseId": "d36fa2b2-46a9-4e26-9450-9a0daa52b578",
         "testCaseType": "TestCase",
         "fileName": "Tests\\TestCase_story3.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "eac0aeb0-a291-47e9-9347-6ed770f4e197",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Workflows\\Story 5\\TestCase_AssignMentor.xaml"
       }
     ],
     "modernBehavior": true
