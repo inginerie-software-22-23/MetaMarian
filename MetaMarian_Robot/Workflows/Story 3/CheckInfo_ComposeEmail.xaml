@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_errorCode" Type="OutArgument(x:Int32)" />
@@ -116,12 +117,12 @@
         <InArgument x:TypeArguments="snm:MailMessage">[emails(0)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetEmployeesEmails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="637.3333333333334,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows/Story 3/GetEmployeesEmails.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetEmployeesEmails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="637.3333333333334,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Story 3\GetEmployeesEmails.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="outEmployeesEmails">[employeesEmails]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckSender.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="637.3333333333334,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows/Story 3/CheckSender.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckSender.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="637.3333333333334,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\Story 3\CheckSender.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="scg:List(x:String)" x:Key="inEmployeesEmails">[employeesEmails]</InArgument>
         <InOutArgument x:TypeArguments="x:Int32" x:Key="inOutErrorCode">[out_errorCode]</InOutArgument>
@@ -148,7 +149,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckDate.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="492.6666666666667,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Workflows/Story 3/CheckDate.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckDate.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="492.6666666666667,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Workflows\Story 3\CheckDate.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="snm:MailMessage" x:Key="inMail">[email]</InArgument>
               <InOutArgument x:TypeArguments="x:Int32" x:Key="inOutErrorCode">[out_errorCode]</InOutArgument>
@@ -174,7 +175,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckAttachments.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="348,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Workflows/Story 3/CheckAttachments.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckAttachments.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="348,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Workflows\Story 3\CheckAttachments.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InOutArgument x:TypeArguments="x:Int32" x:Key="inOutErrorCode">[out_errorCode]</InOutArgument>
                     <InArgument x:TypeArguments="snm:MailMessage" x:Key="inEmail">[email]</InArgument>
@@ -186,7 +187,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ComposeEmail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="637.3333333333334,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Workflows/Story 3/ComposeEmail.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ComposeEmail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="637.3333333333334,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Workflows\Story 3\ComposeEmail.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:Int32" x:Key="inErrorCode">[out_errorCode]</InArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="outText">[out_responseEmail]</OutArgument>
