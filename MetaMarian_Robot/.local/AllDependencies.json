@@ -13484,6 +13484,7 @@
       "path": "runtime.win.system.console/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "ref/netstandard/_._",
@@ -13588,6 +13589,7 @@
       "path": "runtime.win7-x64.runtime.native.system.io.compression/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.win7-x64.runtime.native.system.io.compression.4.3.0.nupkg.sha512",
