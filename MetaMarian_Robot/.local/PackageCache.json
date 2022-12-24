@@ -23,8 +23,8 @@
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib/net5.0-windows7.0/Microsoft.Vbe.Interop.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib/net5.0-windows7.0/Office.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib/net5.0-windows7.0/UiPath.Excel.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib/net5.0-windows7.0/UiPath.Excel.Activities.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib/net5.0-windows7.0/UiPath.Excel.Activities.Package.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib/net5.0-windows7.0/UiPath.Excel.Activities.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib/net5.0-windows7.0/UiPath.Excel.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.platform\\22.10.2\\lib/net6.0-windows7.0/UiPath.Platform.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/netstandard2.0/TelemetryClient.dll"
@@ -183,8 +183,8 @@
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/netstandard2.0/TelemetryClient.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib/net6.0-windows7.0/UiPath.Testing.Activities.Design.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib/net6.0-windows7.0/UiPath.Testing.Activities.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib/net6.0-windows7.0/UiPath.Testing.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib/net6.0-windows7.0/UiPath.Testing.RulesLibrary.dll"
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib/net6.0-windows7.0/UiPath.Testing.RulesLibrary.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib/net6.0-windows7.0/UiPath.Testing.dll"
       ],
       "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview"
     },
@@ -214,11 +214,11 @@
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.CV.Activities.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.CV.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomation.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationCore.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.Activities.Design.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.Activities.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.Wizards.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.vision\\3.6.0\\lib/net6.0-windows7.0/UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.vision\\3.6.0\\lib/net6.0-windows7.0/UiPath.Vision.Core.dll",
@@ -6940,8 +6940,8 @@
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib\\net5.0-windows7.0\\Microsoft.Vbe.Interop.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib\\net5.0-windows7.0\\Office.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib\\net5.0-windows7.0\\UiPath.Excel.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib\\net5.0-windows7.0\\UiPath.Excel.Activities.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib\\net5.0-windows7.0\\UiPath.Excel.Activities.Package.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib\\net5.0-windows7.0\\UiPath.Excel.Activities.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib\\net5.0-windows7.0\\UiPath.Excel.dll"
       ],
       "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview"
@@ -7035,8 +7035,8 @@
       "Assemblies": [
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.Testing.Activities.Design.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.Testing.Activities.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.Testing.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.Testing.RulesLibrary.dll"
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.Testing.RulesLibrary.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.Testing.dll"
       ],
       "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview"
     },
@@ -7050,11 +7050,11 @@
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.CV.Activities.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.CV.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomation.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationCore.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.Activities.Design.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.Activities.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.Wizards.dll"
       ],
       "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4"
