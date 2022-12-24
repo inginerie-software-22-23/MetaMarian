@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NYJ9soi7fVeLB8ujU+nXuEjepAihALv1d21Wmlmd3wnp/NLyIB/JaGJ7iWMFh8GpeC/3PJEihgCGVV+wAhnRbw==",
+  "dgSpecHash": "3LK/eoDCgx9wYNjLvDK+aANZ44Iy7POISsA21b0kyIBdX7uFan5LNlumjBUVXnnTfbeGoxepY4bCrSYE6psrDQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\cosmin.oanea\\Documents\\IS\\MetaMarian\\MetaMarian_Robot\\.local\\",
   "expectedPackageFiles": [
@@ -266,19 +266,19 @@
     "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
     "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath\\22.10.46.47635\\uipath.22.10.46.47635.nupkg.sha512",
+    "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath\\22.10.49.23\\uipath.22.10.49.23.nupkg.sha512",
     "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\uipath.activities.runtimegovernance.1.1.6.nupkg.sha512",
     "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.connectionclient\\1.4.1\\uipath.connectionclient.1.4.1.nupkg.sha512",
-    "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\uipath.excel.activities.2.16.0.nupkg.sha512",
+    "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\uipath.excel.activities.2.17.0-preview.nupkg.sha512",
     "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.imageprocessing\\22.4.1\\uipath.imageprocessing.22.4.1.nupkg.sha512",
-    "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\uipath.mail.activities.1.18.1.nupkg.sha512",
+    "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\uipath.mail.activities.1.18.2.nupkg.sha512",
     "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.ocr.activities\\3.11.0\\uipath.ocr.activities.3.11.0.nupkg.sha512",
     "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.ocr.contracts\\2.13.0\\uipath.ocr.contracts.2.13.0.nupkg.sha512",
     "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.platform\\22.10.2\\uipath.platform.22.10.2.nupkg.sha512",
-    "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.3\\uipath.system.activities.22.10.3.nupkg.sha512",
+    "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.4\\uipath.system.activities.22.10.4.nupkg.sha512",
     "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\uipath.telemetry.client.1.5.3.nupkg.sha512",
-    "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.10.0\\uipath.testing.activities.22.10.0.nupkg.sha512",
-    "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\uipath.uiautomation.activities.22.10.3.nupkg.sha512",
+    "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\uipath.testing.activities.22.12.0-preview.nupkg.sha512",
+    "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\uipath.uiautomation.activities.22.10.4.nupkg.sha512",
     "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.vision\\3.6.0\\uipath.vision.3.6.0.nupkg.sha512"
   ],
   "logs": []

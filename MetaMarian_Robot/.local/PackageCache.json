@@ -3,7 +3,7 @@
     {
       "Package": {
         "Id": "UiPath.Excel.Activities",
-        "Version": "2.16.0"
+        "Version": "2.17.0-preview"
       },
       "Assemblies": [
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\closedxml\\0.95.4\\lib/netstandard2.0/ClosedXML.dll",
@@ -19,22 +19,78 @@
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\lib/netstandard2.0/BouncyCastle.Crypto.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\sharpziplib\\1.3.3\\lib/netstandard2.1/ICSharpCode.SharpZipLib.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\lib/net5.0-windows7.0/Microsoft.Office.Interop.Excel.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\lib/net5.0-windows7.0/Microsoft.Vbe.Interop.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\lib/net5.0-windows7.0/Office.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\lib/net5.0-windows7.0/UiPath.Excel.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\lib/net5.0-windows7.0/UiPath.Excel.Activities.Package.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\lib/net5.0-windows7.0/UiPath.Excel.Activities.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\lib/net5.0-windows7.0/UiPath.Excel.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib/net5.0-windows7.0/Microsoft.Office.Interop.Excel.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib/net5.0-windows7.0/Microsoft.Vbe.Interop.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib/net5.0-windows7.0/Office.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib/net5.0-windows7.0/UiPath.Excel.Activities.Design.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib/net5.0-windows7.0/UiPath.Excel.Activities.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib/net5.0-windows7.0/UiPath.Excel.Activities.Package.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib/net5.0-windows7.0/UiPath.Excel.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.platform\\22.10.2\\lib/net6.0-windows7.0/UiPath.Platform.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/netstandard2.0/TelemetryClient.dll"
       ],
-      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0"
+      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Mail.Activities",
+        "Version": "1.18.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis\\1.55.0\\lib/netstandard2.0/Google.Apis.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.calendar.v3\\1.55.0.2554\\lib/netstandard2.0/Google.Apis.Calendar.v3.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.core\\1.55.0\\lib/netstandard2.0/Google.Apis.Core.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2510\\lib/netstandard2.0/Google.Apis.Gmail.v1.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.peopleservice.v1\\1.55.0.2567\\lib/netstandard2.0/Google.Apis.PeopleService.v1.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\htmlagilitypack\\1.11.38\\lib/netstandard2.0/HtmlAgilityPack.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\mailkit\\3.1.1\\lib/net6.0/MailKit.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\mimekit\\3.1.1\\lib/net6.0/MimeKit.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\newtonsoft.json\\13.0.1\\lib/netstandard2.0/Newtonsoft.Json.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.asyncex.context\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Context.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.asyncex.coordination\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Coordination.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.asyncex.interop.waithandles\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Interop.WaitHandles.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.asyncex.oop\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Oop.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.asyncex.tasks\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Tasks.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.cancellation\\1.1.0\\lib/netstandard2.0/Nito.Cancellation.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.collections.deque\\1.1.0\\lib/netstandard2.0/Nito.Collections.Deque.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.disposables\\2.2.0\\lib/netstandard2.1/Nito.Disposables.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.runtime.caching\\5.0.0\\runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.connectionclient\\1.4.1\\lib/net5.0/ConnectionClient.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib/net6.0-windows7.0/Interop.Domino.UiPath.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib/net6.0-windows7.0/Office.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib/net6.0-windows7.0/UiPath.Mail.Activities.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib/net6.0-windows7.0/UiPath.Mail.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib/net6.0-windows7.0/UiPath.MainSessionServer.Shared.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.platform\\22.10.2\\lib/net6.0-windows7.0/UiPath.Platform.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/netstandard2.0/TelemetryClient.dll"
+      ],
+      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2"
     },
     {
       "Package": {
         "Id": "UiPath.System.Activities",
-        "Version": "22.10.3"
+        "Version": "22.10.4"
       },
       "Assemblies": [
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\csvhelper\\16.0.0\\lib/netstandard2.1/CsvHelper.dll",
@@ -105,17 +161,17 @@
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.servicemodel.syndication\\5.0.0\\lib/netstandard2.0/System.ServiceModel.Syndication.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.serviceprocess.servicecontroller\\5.0.0\\runtimes/win/lib/netstandard2.0/System.ServiceProcess.ServiceController.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.platform\\22.10.2\\lib/net6.0-windows7.0/UiPath.Platform.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.3\\lib/net5.0-windows7.0/UiPath.OrchestratorClient.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.3\\lib/net5.0-windows7.0/UiPath.System.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.3\\lib/net5.0-windows7.0/UiPath.System.Activities.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.4\\lib/net5.0-windows7.0/UiPath.OrchestratorClient.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.4\\lib/net5.0-windows7.0/UiPath.System.Activities.Design.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.4\\lib/net5.0-windows7.0/UiPath.System.Activities.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/netstandard2.0/TelemetryClient.dll"
       ],
-      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.3"
+      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.4"
     },
     {
       "Package": {
         "Id": "UiPath.Testing.Activities",
-        "Version": "22.10.0"
+        "Version": "22.12.0-preview"
       },
       "Assemblies": [
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\automapper\\9.0.0\\lib/netstandard2.0/AutoMapper.dll",
@@ -125,17 +181,17 @@
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.runtime.caching\\5.0.0\\runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.platform\\22.10.2\\lib/net6.0-windows7.0/UiPath.Platform.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/netstandard2.0/TelemetryClient.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.10.0\\lib/net5.0-windows7.0/UiPath.Testing.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.10.0\\lib/net5.0-windows7.0/UiPath.Testing.Activities.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.10.0\\lib/net5.0-windows7.0/UiPath.Testing.RulesLibrary.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.10.0\\lib/net5.0-windows7.0/UiPath.Testing.dll"
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib/net6.0-windows7.0/UiPath.Testing.Activities.Design.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib/net6.0-windows7.0/UiPath.Testing.Activities.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib/net6.0-windows7.0/UiPath.Testing.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib/net6.0-windows7.0/UiPath.Testing.RulesLibrary.dll"
       ],
-      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.10.0"
+      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview"
     },
     {
       "Package": {
         "Id": "UiPath.UIAutomation.Activities",
-        "Version": "22.10.3"
+        "Version": "22.10.4"
       },
       "Assemblies": [
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.azure.cognitiveservices.vision.computervision\\7.0.1\\lib/netstandard2.0/Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll",
@@ -145,7 +201,7 @@
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nlog\\4.5.11\\lib/netstandard2.0/NLog.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\polly\\7.1.0\\lib/netstandard2.0/Polly.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath\\22.10.46.47635\\lib/net6.0-windows7.0/UiPath.Interop.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath\\22.10.49.23\\lib/net6.0-windows7.0/UiPath.Interop.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.imageprocessing\\22.4.1\\lib/net5.0-windows7.0/UiPath.ImageProcessingInterop.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.ocr.activities\\3.11.0\\lib/net6.0-windows7.0/UiPath.OCR.Activities.Design.dll",
@@ -154,79 +210,23 @@
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.ocr.contracts\\2.13.0\\lib/net6.0-windows7.0/UiPath.OCR.Contracts.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.platform\\22.10.2\\lib/net6.0-windows7.0/UiPath.Platform.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/netstandard2.0/TelemetryClient.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib/net6.0-windows7.0/UiPath.CV.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib/net6.0-windows7.0/UiPath.CV.Activities.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib/net6.0-windows7.0/UiPath.CV.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib/net6.0-windows7.0/UiPath.UIAutomation.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib/net6.0-windows7.0/UiPath.UIAutomationCore.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.Activities.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib/net6.0-windows7.0/UiPath.UiAutomation.Activities.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib/net6.0-windows7.0/UiPath.Wizards.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.CV.Activities.Design.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.CV.Activities.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.CV.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomation.Activities.Design.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.UiAutomation.Activities.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationCore.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.Activities.Design.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.Activities.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib/net6.0-windows7.0/UiPath.Wizards.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.vision\\3.6.0\\lib/net6.0-windows7.0/UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.vision\\3.6.0\\lib/net6.0-windows7.0/UiPath.Vision.Core.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.vision\\3.6.0\\lib/net6.0-windows7.0/UiPath.Vision.GoogleCloud.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.vision\\3.6.0\\lib/net6.0-windows7.0/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.vision\\3.6.0\\lib/net6.0-windows7.0/UiPath.Vision.dll"
       ],
-      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3"
-    },
-    {
-      "Package": {
-        "Id": "UiPath.Mail.Activities",
-        "Version": "1.18.1"
-      },
-      "Assemblies": [
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis\\1.55.0\\lib/netstandard2.0/Google.Apis.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.calendar.v3\\1.55.0.2554\\lib/netstandard2.0/Google.Apis.Calendar.v3.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.core\\1.55.0\\lib/netstandard2.0/Google.Apis.Core.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2510\\lib/netstandard2.0/Google.Apis.Gmail.v1.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.peopleservice.v1\\1.55.0.2567\\lib/netstandard2.0/Google.Apis.PeopleService.v1.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\htmlagilitypack\\1.11.38\\lib/netstandard2.0/HtmlAgilityPack.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\mailkit\\3.1.1\\lib/net6.0/MailKit.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\mimekit\\3.1.1\\lib/net6.0/MimeKit.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\newtonsoft.json\\13.0.1\\lib/netstandard2.0/Newtonsoft.Json.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.asyncex.context\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Context.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.asyncex.coordination\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Coordination.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.asyncex.interop.waithandles\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Interop.WaitHandles.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.asyncex.oop\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Oop.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.asyncex.tasks\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Tasks.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.cancellation\\1.1.0\\lib/netstandard2.0/Nito.Cancellation.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.collections.deque\\1.1.0\\lib/netstandard2.0/Nito.Collections.Deque.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\nito.disposables\\2.2.0\\lib/netstandard2.1/Nito.Disposables.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\lib/netstandard2.0/BouncyCastle.Crypto.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\system.runtime.caching\\5.0.0\\runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.connectionclient\\1.4.1\\lib/net5.0/ConnectionClient.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib/net6.0-windows7.0/Interop.Domino.UiPath.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib/net6.0-windows7.0/Office.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib/net6.0-windows7.0/UiPath.Mail.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib/net6.0-windows7.0/UiPath.MainSessionServer.Shared.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.platform\\22.10.2\\lib/net6.0-windows7.0/UiPath.Platform.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/netstandard2.0/TelemetryClient.dll"
-      ],
-      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1"
+      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4"
     }
   ],
   "Conflicts": [],
@@ -4289,7 +4289,7 @@
     },
     "UiPath": {
       "Id": "UiPath",
-      "Version": "22.10.46.47635",
+      "Version": "22.10.49.23",
       "Dependencies": []
     },
     "UiPath.Activities.RuntimeGovernance": {
@@ -4330,7 +4330,7 @@
     },
     "UiPath.Excel.Activities": {
       "Id": "UiPath.Excel.Activities",
-      "Version": "2.16.0",
+      "Version": "2.17.0-preview",
       "Dependencies": [
         {
           "Item1": "ClosedXML",
@@ -4377,7 +4377,7 @@
     },
     "UiPath.Mail.Activities": {
       "Id": "UiPath.Mail.Activities",
-      "Version": "1.18.1",
+      "Version": "1.18.2",
       "Dependencies": [
         {
           "Item1": "Google.Apis.Calendar.v3",
@@ -4529,7 +4529,7 @@
     },
     "UiPath.System.Activities": {
       "Id": "UiPath.System.Activities",
-      "Version": "22.10.3",
+      "Version": "22.10.4",
       "Dependencies": [
         {
           "Item1": "CsvHelper",
@@ -4613,7 +4613,7 @@
     },
     "UiPath.Testing.Activities": {
       "Id": "UiPath.Testing.Activities",
-      "Version": "22.10.0",
+      "Version": "22.12.0-preview",
       "Dependencies": [
         {
           "Item1": "AutoMapper",
@@ -4651,11 +4651,11 @@
     },
     "UiPath.UIAutomation.Activities": {
       "Id": "UiPath.UIAutomation.Activities",
-      "Version": "22.10.3",
+      "Version": "22.10.4",
       "Dependencies": [
         {
           "Item1": "UiPath",
-          "Item2": "[22.10.46.47635, 22.10.46.47635]"
+          "Item2": "[22.10.49.23, 22.10.49.23]"
         },
         {
           "Item1": "UiPath.Vision",
@@ -4783,8 +4783,8 @@
         "Version": "1.55.0"
       },
       "Assemblies": [
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\netstandard2.0\\Google.Apis.Auth.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\netstandard2.0\\Google.Apis.Auth.PlatformServices.dll"
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\netstandard2.0\\Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\netstandard2.0\\Google.Apis.Auth.dll"
       ],
       "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\google.apis.auth\\1.55.0"
     },
@@ -6903,12 +6903,12 @@
     {
       "Package": {
         "Id": "UiPath",
-        "Version": "22.10.46.47635"
+        "Version": "22.10.49.23"
       },
       "Assemblies": [
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath\\22.10.46.47635\\lib\\net6.0-windows7.0\\UiPath.Interop.dll"
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath\\22.10.49.23\\lib\\net6.0-windows7.0\\UiPath.Interop.dll"
       ],
-      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath\\22.10.46.47635"
+      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath\\22.10.49.23"
     },
     {
       "Package": {
@@ -6933,18 +6933,18 @@
     {
       "Package": {
         "Id": "UiPath.Excel.Activities",
-        "Version": "2.16.0"
+        "Version": "2.17.0-preview"
       },
       "Assemblies": [
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\lib\\net5.0-windows7.0\\Microsoft.Office.Interop.Excel.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\lib\\net5.0-windows7.0\\Microsoft.Vbe.Interop.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\lib\\net5.0-windows7.0\\Office.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\lib\\net5.0-windows7.0\\UiPath.Excel.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\lib\\net5.0-windows7.0\\UiPath.Excel.Activities.Package.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\lib\\net5.0-windows7.0\\UiPath.Excel.Activities.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0\\lib\\net5.0-windows7.0\\UiPath.Excel.dll"
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib\\net5.0-windows7.0\\Microsoft.Office.Interop.Excel.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib\\net5.0-windows7.0\\Microsoft.Vbe.Interop.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib\\net5.0-windows7.0\\Office.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib\\net5.0-windows7.0\\UiPath.Excel.Activities.Design.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib\\net5.0-windows7.0\\UiPath.Excel.Activities.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib\\net5.0-windows7.0\\UiPath.Excel.Activities.Package.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview\\lib\\net5.0-windows7.0\\UiPath.Excel.dll"
       ],
-      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.16.0"
+      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.excel.activities\\2.17.0-preview"
     },
     {
       "Package": {
@@ -6959,19 +6959,19 @@
     {
       "Package": {
         "Id": "UiPath.Mail.Activities",
-        "Version": "1.18.1"
+        "Version": "1.18.2"
       },
       "Assemblies": [
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib\\net6.0-windows7.0\\Interop.Domino.UiPath.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib\\net6.0-windows7.0\\Microsoft.Office.Interop.Outlook.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib\\net6.0-windows7.0\\Microsoft.Office.Interop.Word.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib\\net6.0-windows7.0\\Office.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib\\net6.0-windows7.0\\UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib\\net6.0-windows7.0\\UiPath.Mail.Activities.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib\\net6.0-windows7.0\\UiPath.Mail.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1\\lib\\net6.0-windows7.0\\UiPath.MainSessionServer.Shared.dll"
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib\\net6.0-windows7.0\\Interop.Domino.UiPath.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib\\net6.0-windows7.0\\Microsoft.Office.Interop.Outlook.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib\\net6.0-windows7.0\\Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib\\net6.0-windows7.0\\Office.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib\\net6.0-windows7.0\\UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib\\net6.0-windows7.0\\UiPath.Mail.Activities.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib\\net6.0-windows7.0\\UiPath.Mail.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\lib\\net6.0-windows7.0\\UiPath.MainSessionServer.Shared.dll"
       ],
-      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.1"
+      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.mail.activities\\1.18.2"
     },
     {
       "Package": {
@@ -7008,14 +7008,14 @@
     {
       "Package": {
         "Id": "UiPath.System.Activities",
-        "Version": "22.10.3"
+        "Version": "22.10.4"
       },
       "Assemblies": [
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.3\\lib\\net5.0-windows7.0\\UiPath.OrchestratorClient.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.3\\lib\\net5.0-windows7.0\\UiPath.System.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.3\\lib\\net5.0-windows7.0\\UiPath.System.Activities.dll"
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.4\\lib\\net5.0-windows7.0\\UiPath.OrchestratorClient.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.4\\lib\\net5.0-windows7.0\\UiPath.System.Activities.Design.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.4\\lib\\net5.0-windows7.0\\UiPath.System.Activities.dll"
       ],
-      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.3"
+      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.system.activities\\22.10.4"
     },
     {
       "Package": {
@@ -7030,34 +7030,34 @@
     {
       "Package": {
         "Id": "UiPath.Testing.Activities",
-        "Version": "22.10.0"
+        "Version": "22.12.0-preview"
       },
       "Assemblies": [
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.10.0\\lib\\net5.0-windows7.0\\UiPath.Testing.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.10.0\\lib\\net5.0-windows7.0\\UiPath.Testing.Activities.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.10.0\\lib\\net5.0-windows7.0\\UiPath.Testing.RulesLibrary.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.10.0\\lib\\net5.0-windows7.0\\UiPath.Testing.dll"
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.Testing.Activities.Design.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.Testing.Activities.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.Testing.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.Testing.RulesLibrary.dll"
       ],
-      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.10.0"
+      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.testing.activities\\22.12.0-preview"
     },
     {
       "Package": {
         "Id": "UiPath.UIAutomation.Activities",
-        "Version": "22.10.3"
+        "Version": "22.10.4"
       },
       "Assemblies": [
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib\\net6.0-windows7.0\\UiPath.CV.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib\\net6.0-windows7.0\\UiPath.CV.Activities.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib\\net6.0-windows7.0\\UiPath.CV.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib\\net6.0-windows7.0\\UiPath.UIAutomation.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib\\net6.0-windows7.0\\UiPath.UIAutomationCore.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.Activities.Design.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.Activities.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib\\net6.0-windows7.0\\UiPath.UiAutomation.Activities.dll",
-        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3\\lib\\net6.0-windows7.0\\UiPath.Wizards.dll"
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.CV.Activities.Design.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.CV.Activities.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.CV.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomation.Activities.Design.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.UiAutomation.Activities.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationCore.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.Activities.Design.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.Activities.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.dll",
+        "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4\\lib\\net6.0-windows7.0\\UiPath.Wizards.dll"
       ],
-      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.3"
+      "Path": "C:\\Users\\cosmin.oanea\\.nuget\\packages\\uipath.uiautomation.activities\\22.10.4"
     },
     {
       "Package": {
