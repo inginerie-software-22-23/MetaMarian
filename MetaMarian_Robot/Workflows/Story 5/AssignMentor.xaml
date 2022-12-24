@@ -112,12 +112,12 @@
         <OutArgument x:TypeArguments="x:String" x:Key="result">[position]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Assign DisplayName="Get corresponding senior position" sap:VirtualizedContainerService.HintSize="520,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Remove the word &quot;junior&quot; from the employee's position" sap:VirtualizedContainerService.HintSize="481.74545454545455,82.90909090909092" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[position]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[position.Replace("junior", "senior")]</InArgument>
+        <InArgument x:TypeArguments="x:String">[position.Replace("junior", "")]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get the mentor's email if one was already assigned" sap:VirtualizedContainerService.HintSize="520,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Workflows/Story 2/GetEmployeeInfo.xaml">
