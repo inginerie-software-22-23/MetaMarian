@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="FillPracticeCertificate" this:FillPracticeCertificate.in_employeeEmail="andreea.milu@gmail.com" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="FillPracticeCertificate" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_employeeEmail" Type="InArgument(x:String)" />
   </x:Members>
@@ -145,102 +145,54 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get employee first name" sap:VirtualizedContainerService.HintSize="378.7636363636364,113.45454545454547" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows/Story 2/GetEmployeeInfo.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="email">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_employeeEmail" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="column">
-            <Literal x:TypeArguments="x:String">First name</Literal>
-          </InArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="result">
-            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="firstName" />
-          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="email">[in_employeeEmail]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="column">First name</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="result">[firstName]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get employee last name" sap:VirtualizedContainerService.HintSize="378.7636363636364,113.45454545454547" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows/Story 2/GetEmployeeInfo.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="email">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_employeeEmail" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="column">
-            <Literal x:TypeArguments="x:String">Last name</Literal>
-          </InArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="result">
-            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="lastName" />
-          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="email">[in_employeeEmail]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="column">Last name</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="result">[lastName]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get employee address" sap:VirtualizedContainerService.HintSize="378.7636363636364,113.45454545454547" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Workflows/Story 2/GetEmployeeInfo.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="email">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_employeeEmail" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="column">
-            <Literal x:TypeArguments="x:String">Address</Literal>
-          </InArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="result">
-            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="address" />
-          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="email">[in_employeeEmail]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="column">Address</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="result">[address]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get manager email" sap:VirtualizedContainerService.HintSize="378.7636363636364,113.45454545454547" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Workflows/Story 2/GetEmployeeInfo.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="email">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_employeeEmail" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="column">
-            <Literal x:TypeArguments="x:String">Manager email</Literal>
-          </InArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="result">
-            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="managerEmail" />
-          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="email">[in_employeeEmail]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="column">Manager email</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="result">[managerEmail]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get skills" sap:VirtualizedContainerService.HintSize="378.7636363636364,113.45454545454547" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Workflows/Story 2/GetEmployeeInfo.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="email">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_employeeEmail" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="column">
-            <Literal x:TypeArguments="x:String">Useful skills</Literal>
-          </InArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="result">
-            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="skills" />
-          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="email">[in_employeeEmail]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="column">Useful skills</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="result">[skills]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetManagerName.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="378.7636363636364,113.45454545454547" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Workflows/Story 11/GetManagerName.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_email">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="managerEmail" />
-          </InArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_name">
-            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="managerName" />
-          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_email">[managerEmail]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_name">[managerName]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get information completed in the form" sap:VirtualizedContainerService.HintSize="378.7636363636364,113.45454545454547" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Workflows/Story 11/GetFormInformation.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_email">
-            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_employeeEmail" />
-          </InArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_faculty">
-            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="faculty" />
-          </OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_university">
-            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="university" />
-          </OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_degree">
-            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="degree" />
-          </OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_group">
-            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="group" />
-          </OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_year">
-            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="year" />
-          </OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_hours">
-            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="hours" />
-          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_email">[in_employeeEmail]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_faculty">[faculty]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_university">[university]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_degree">[degree]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_group">[group]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_year">[year]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_hours">[hours]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
@@ -349,7 +301,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="520, 758, 118, 62" FriendlyName="'acrord32.exe practice_c…'" Guid="423eae87-34e2-4a3b-9f7e-4f03d928a770" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHYAAAA+CAYAAAD+rO8QAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEOoAABDqAYLTCpgAAAEdSURBVHhe7dcxCsJAGAXh7TyDZ/Metp7CW3gNS49gp71F+jVgyhd2C0OWYT54hEC64S9SqpAMC2VYKMNCGRbKsFCGhTIslGGhDAtlWCjDQjXDllLcYOvRFVbjMCyUYaEMC2VYqM3DPl9u6yXtsFN93y+GHXlJM+znWs/H+bdoeV1l2P2WtC/2x7ADLzEsYIlhAUsMC1hiWMASwwKWGBawxLCAJYYFLDEsYIlhAUsMC1hiWMASwwKWGBawxLCAJX1hJ8OOvKQd9lFvp4NhR17Sd7Hzd8tzlWH3W2JYwBLDApYYFrDEsIAlhgUsMSxgiWEBSzYPq30YFsqwUIaFMiyUYaH+GtaNtR6eI5RhoQwLZVgow0IZFsqwUIZFqvULInQsYHd7sqMAAAAASUVORK5CYII=" InformativeScreenshot="52f4075cc06a98020576fb0cc9d0e90c.png" ScopeSelectorArgument="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='practice_certificate.pdf - Adobe Acrobat Reader DC' /&gt;" SearchSteps="Image" TargetType="ImageBased">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="645, 764, 206, 49" FriendlyName="'acrord32.exe practice_c…'" ImageBase64="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" SearchSteps="Image" TargetType="ImageBased" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -360,7 +312,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="651, 820, 681, 59" FriendlyName="'acrord32.exe practice_c…'" Guid="bad532ad-9cfe-4c41-96f9-aed0c9a351af" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAqkAAAA7CAYAAABYFxOmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEOoAABDqAYLTCpgAAAJkSURBVHhe7duxahRhFIbhLVLbWQS8DTuLrSwsbGRBC29AsLROI1jYWdoKingFAS8gYCWIa6FdtIiVRFBZ5BicVQk5ZpUZPad4Xnhg/pm5gI+BmYUkSZLULCNVkiRJ7TJSJUmS1C4jVZIkSe0yUiVJktQuI1WSJEntMlIlSZLULiNVkiRJ7fo5UmezGQAATGZMx0aqJEmSNEVGqiRJktplpEqSJKldRqokSZLaZaRKkiSpXf98pL7ZBwCA38syUgEAKJVlpAIAUCrLSAUAoFSWkQoAQKksIxUAgFJZRioAAKWyjFQAAEplGakAAJTKMlIBACiVZaQCAFAqy0gFAKBUlpEKAECpLCMVAIBSWUYqAAClsoxUAABKZRmpAACUyjJSAQAolWWkAgBQKstIBQCgVJaRCgBAqSwjFQCAUllGKgAApbKMVAAASmUZqQAAlMoatuUqDl/uxK0LW0fnizF/tIyD4fHGjFQAAEbJGrblQTy7c/b79WARN5afhhc2ZKQCADBK1rAtP8bb3UsxP7reur4Tt6+eie37y1gNr5yakQoAwChZJ7fl53j3+LyRCgDA/5F1clu+jqc3z8V89/36fHpGKgAAo2Qd35arONy7FtuLJ/H86/rWhoxUAABGyfq1LYc//K/M78bD/S/re5szUgEAGCVr2JYf4tW9y7F4sBcv/vAL6o82jlRJkiTpbxu7LY1USZIkTZ6RKkmSpHYZqZIkSWqXkSpJkqR2TTpSAQBgKmPy+VSSJEntMlIlSZLULiNVkiRJ7TJSJUmS1C4jVZIkSe0yUiVJktQuI1WSJEnNivgGCNhpp/VGjMYAAAAASUVORK5CYII=" InformativeScreenshot="f32e73c46014a72f30623ed87827dde3.png" ScopeSelectorArgument="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='practice_certificate_template.pdf - Adobe Acrobat Reader DC' /&gt;" SearchSteps="Image" TargetType="ImageBased">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="528, 827, 136, 57" FriendlyName="'acrord32.exe practice_c…'" ImageBase64="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" SearchSteps="Image" TargetType="ImageBased" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -371,7 +323,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="246, 875, 606, 69" FriendlyName="'acrord32.exe practice_c…'" Guid="267f1455-ea46-4494-b363-cfbcc5726959" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAl4AAABFCAYAAACbr+j3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEOoAABDqAYLTCpgAAAH7SURBVHhe7dgxSgNRGIXRKQS3ldreStybC3ADgguwcQl2ugG1lTGKkOYaScx/q3PgG3gPpr+8ZQUAoMLwAgAoMbwAAEoMLwCAEsMLAKDE8AIAKDG8AABKDC8AgBLDCwCgxPACACgxvAAASgwvAIASwwsAoMTwAgAoWba+PpIkSTqgY2z/8+gFAHAIwwsAoMTwAgAoMbwAAEoMLwCAkpMPr6dnSZIkJYaXJEnSQInhJUmSNFBieEmSJA2UGF6SJEkDJYaXJEnSQInhJUmSNFBieEmSJA2UGF6SJEkDJYaXJEnSQInhJUmSNFBieEmSJA2UGF6SJEkDJYaXJEnSQInhJUmSNFBieEmSJA2UGF6SJEkDJYaXJEnSQInhJUmSNFBieEmSJA2UGF6SJEkDJYaXJEnSQInhJUmSNFCy20/v68vdxbrZns+ub9b714+f+8zwkiRJ2lOy20+P6+3V+fd5WTbr5cPbz31meEmSJO0p2e0nL16SJEknK/ltP/3F8JIkSdpTYnhJkiQNlBhekiRJAyWGlyRJ0kDJyYcXAACZ4QUAUGJ4AQCUGF4AACWGFwBAyb+GlyRJkg7rGJ67AABKDC8AgBLDCwCgxPACACgxvAAASgwvAIASwwsAoMTwAgAoMbwAAEoMLwCAEsMLAKDE8AIAKDG8AAAq1vUTvhHZaBjHS7EAAAAASUVORK5CYII=" InformativeScreenshot="2d18d5bb9b472db243b1140ccfecf6b9.png" ScopeSelectorArgument="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='practice_certificate.pdf - Adobe Acrobat Reader DC' /&gt;" SearchSteps="Image" TargetType="ImageBased">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="156, 887, 88, 94" FriendlyName="'acrord32.exe practice_c…'" ImageBase64="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" SearchSteps="Image" TargetType="ImageBased" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -382,7 +334,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="164, 986, 1044, 69" FriendlyName="'acrord32.exe practice_c…'" Guid="b4e395e7-4593-4095-bc12-b166b1ad755c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABBQAAABFCAYAAAD6grXdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEOoAABDqAYLTCpgAAAJJSURBVHhe7drRCYMAAENB99+xf93DLhAigfqjd/CWCDlOAAAAgJFBAQAAAJgZFAAAAICZQQEAAACYGRQAAACAmUEBAAAAmBkUAAAAgJlBAQAAAJgZFAAAAICZQQEAAACYGRQAAACAmUEBAAAAmBkUAAAAgFkdFI7jkCRJkiRJL+zK5aAAAAAAvItBAQAAAJgZFAAAAICZQQEAAACYGRQAAACA2W2DwucrSZIkSZKeUGJQkCRJkiRJtcSgIEmSJEmSaolBQZIkSZIk1RKDgiRJkiRJqiUGBUmSJEmSVEsMCpIkSZIkqZYYFCRJkiRJUi0xKEiSJEmSpFpiUJAkSZIkSbXEoCBJkiRJkmqJQUGSJEmSJNUSg4IkSZIkSaolBgVJkiRJklRLDAqSJEmSJKmWGBQkSZIkSVItMShIkiRJkqRaYlCQJEmSJEm1xKAgSZIkSZJqiUFBkiRJkiTVEoOCJEmSJEmqJQYFSZIkSZJUSwwKkiRJkiSplhgUJEmSJElSLTEoSJIkSZKkWmJQkCRJkiRJtcSgIEmSJEmSaolBQZIkSZIk1RKDgiRJkiRJqiUGBUmSJEmSVEsMCpIkSZIkqZYYFCRJkiRJUi25bVAAAAAAnsugAAAAAMwMCgAAAMDMoAAAAADMDAoAAADA7C+DgiRJkiRJel9XXBAAAACAmUEBAAAAmBkUAAAAgJlBAQAAAJgZFAAAAICZQQEAAACYGRQAAACAmUEBAAAAmBkUAAAAgJlBAQAAAJgZFAAAAICZQQEAAAAYnecPwk8dYVGR0C0AAAAASUVORK5CYII=" InformativeScreenshot="efafad1fe53f92fbd96b15c0d9f5a945.png" ScopeSelectorArgument="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='practice_certificate.pdf - Adobe Acrobat Reader DC' /&gt;" SearchSteps="Image" TargetType="ImageBased">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="169, 935, 143, 62" FriendlyName="'acrord32.exe practice_c…'" ImageBase64="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" SearchSteps="Image" TargetType="ImageBased" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -447,7 +399,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="897, 698, 298, 81" FriendlyName="'acrord32.exe practice_c…'" Guid="860d919b-b09d-4ecc-a345-7c49cf473e28" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASoAAABRCAYAAABlqOuZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEOoAABDqAYLTCpgAAAEVSURBVHhe7dQxAQAADMOg+Tfd2cgBIrgBxIkKyBMVkCcqIE9UQJ6ogDxRAXmiAvJEBeSJCsgTFZAnKiBPVECeqIA8UQF5ogLyRAXkiQrIExWQJyogT1RAnqiAPFEBeaIC8kQF5IkKyBMVkCcqIE9UQJ6ogDxRAXmiAvJEBeSJCsgTFZAnKiBPVECeqIA8UQF5ogLyRAXkiQrIExWQJyogT1RAnqiAPFEBeaIC8kQF5IkKyBMVkCcqIE9UQJ6ogDxRAXmiAvJEBeSJCsgTFZAnKiBPVECeqIA8UQF5ogLyRAXkiQrIExWQJyogT1RAnqiAPFEBeaIC8kQF5IkKyBMVkCcqIE9UQJ6ogDxRAXmiAvJEBcRtD+JyxNLBkfq4AAAAAElFTkSuQmCC" InformativeScreenshot="90b2effd6f07ee0775fa850c4bf6e1cf.png" ScopeSelectorArgument="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='practice_certificate.pdf - Adobe Acrobat Reader DC' /&gt;" SearchSteps="Image" TargetType="ImageBased">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="918, 919, 340, 81" FriendlyName="'acrord32.exe practice_c…'" ImageBase64="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" SearchSteps="Image" TargetType="ImageBased" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
