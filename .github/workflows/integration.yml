@@ -31,7 +31,7 @@ jobs:
           echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
           echo "GITHUB_SHA: ${GITHUB_SHA}"
           echo "GITHUB_REF: ${GITHUB_REF}"
-  cleaner:
+  clean:
     runs-on: ubuntu-latest
     steps:
       - name: Runner workspace path
@@ -41,7 +41,7 @@ jobs:
 
   build-uipath-nuget-package:
     # You should be able to run on windows 2019 or windows latest
-    needs: cleaner
+    needs: clean
     runs-on: windows-latest
     steps: 
       - name: Check out repository code
