@@ -47,7 +47,7 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
+      "filePath": "Main.xaml", 
       "uniqueId": "8e52a6d5-6c2b-40ff-a444-b39cdd79d286",
       "input": [],
       "output": []
