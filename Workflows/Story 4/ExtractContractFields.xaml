@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1036.8,1375.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>783.2,1375.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtractContractFields_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -121,7 +121,7 @@
         <OutArgument x:TypeArguments="x:String">[out_firmSignature]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[in_arrayContractText(5).Split(":"c)(1)]</InArgument>
+        <InArgument x:TypeArguments="x:String">[in_arrayContractText(8).Split(":"c)(1)]</InArgument>
       </Assign.Value>
     </Assign>
     <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_12">
@@ -129,7 +129,7 @@
         <OutArgument x:TypeArguments="x:String">[out_dateFirmSignature]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[in_arrayContractText(6).Split(":"c)(1)]</InArgument>
+        <InArgument x:TypeArguments="x:String">[in_arrayContractText(7).Split(":"c)(1)]</InArgument>
       </Assign.Value>
     </Assign>
     <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_15">
@@ -137,7 +137,7 @@
         <OutArgument x:TypeArguments="x:String">[out_employeeSignature]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[in_arrayContractText(7).Split(":"c)(1)]</InArgument>
+        <InArgument x:TypeArguments="x:String">[in_arrayContractText(6).Split(":"c)(1)]</InArgument>
       </Assign.Value>
     </Assign>
     <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_13">
@@ -145,7 +145,7 @@
         <OutArgument x:TypeArguments="x:String">[out_dateEmployeeSignature]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[in_arrayContractText(8).Split(":"c)(1)]</InArgument>
+        <InArgument x:TypeArguments="x:String">[in_arrayContractText(5).Split(":"c)(1)]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;ExtractContractFields workflow has ended&quot;]" />
