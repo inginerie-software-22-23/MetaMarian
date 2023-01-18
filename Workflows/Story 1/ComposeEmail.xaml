@@ -1,0 +1,193 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ComposeEmail" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_EmailAddress" Type="InArgument(x:String)" />
+    <x:Property Name="out_EmailText" Type="InArgument(x:String)" />
+    <x:Property Name="in_CourseraPassword" Type="InArgument(x:String)" />
+    <x:Property Name="in_CodecademyPassword" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:ComposeEmail.in_CourseraPassword>
+    <InArgument x:TypeArguments="x:String" />
+  </this:ComposeEmail.in_CourseraPassword>
+  <this:ComposeEmail.in_CodecademyPassword>
+    <InArgument x:TypeArguments="x:String" />
+  </this:ComposeEmail.in_CodecademyPassword>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1399.3333333333333,1289.3333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ComposeEmail_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="52">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="41">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ComposeEmail" sap:VirtualizedContainerService.HintSize="496,1224.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="FirstName" />
+      <Variable x:TypeArguments="x:String" Name="ManagerEmail" />
+      <Variable x:TypeArguments="x:String" Name="MentorEmail" />
+      <Variable x:TypeArguments="x:String" Name="ManagerName" />
+      <Variable x:TypeArguments="x:String" Name="MentorName" />
+      <Variable x:TypeArguments="x:String" Name="UsefulLinks" />
+      <Variable x:TypeArguments="x:String" Name="CourseSuggestions" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get First Name" sap:VirtualizedContainerService.HintSize="434,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Story 2\GetEmployeeInfo.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="email">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_EmailAddress" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="column">
+          <Literal x:TypeArguments="x:String">First Name</Literal>
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="result">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="FirstName" />
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get manager email address" sap:VirtualizedContainerService.HintSize="434,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Workflows\Story 2\GetEmployeeInfo.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="email">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_EmailAddress" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="column">
+          <Literal x:TypeArguments="x:String">Manager email</Literal>
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="result">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="ManagerEmail" />
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <Assign sap:VirtualizedContainerService.HintSize="434,86" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[ManagerName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">[ManagerEmail.ToString.Split("@")(0).split(".")(0)(0).ToString.ToUpper + ManagerEmail.ToString.Split("@")(0).split(".")(0).Substring(1) + " " + 
+ManagerEmail.ToString.Split("@")(0).split(".")(1)(0).ToString.ToUpper + ManagerEmail.ToString.Split("@")(0).split(".")(1).Substring(1)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get mentor email address" sap:VirtualizedContainerService.HintSize="434,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Workflows\Story 2\GetEmployeeInfo.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="email">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_EmailAddress" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="column">
+          <Literal x:TypeArguments="x:String">Mentor email</Literal>
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="result">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="MentorEmail" />
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <Assign sap:VirtualizedContainerService.HintSize="434,86" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[MentorName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">[MentorEmail.ToString.Split("@")(0).split(".")(0)(0).ToString.ToUpper + MentorEmail.ToString.Split("@")(0).split(".")(0).Substring(1) + " " + 
+MentorEmail.ToString.Split("@")(0).split(".")(1)(0).ToString.ToUpper + MentorEmail.ToString.Split("@")(0).split(".")(1).Substring(1)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get useful links" sap:VirtualizedContainerService.HintSize="434,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Workflows\Story 6\GetUsefulLinks.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_usefulLinks">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="UsefulLinks" />
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get course suggestions" sap:VirtualizedContainerService.HintSize="434,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Workflows\Story 6\GetCourseSuggestion.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_employeeEmail">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_EmailAddress" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_courseSuggestions">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="CourseSuggestions" />
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <Assign DisplayName="Compose all together" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[out_EmailText]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">["Dear " + FirstName + ",\n\nWe are thrilled to have you join our team at Metamarian! We are confident that your skills and experience will be a valuable asset to our organization.\n\nTo help you get settled in, we wanted to provide you with some important information regarding your first few weeks with us.\n\n1. Our company offers a comprehensive onboarding program that will give you a thorough understanding of our company culture and the work you will be doing. The program will be led by your manager, " + ManagerName + ", and you will also have a mentor, " + MentorName + ", who will be available to answer any questions you may have.\n\n2. We have a generous break policy that includes two 15-minute breaks and a 30-minute lunch break each day.\n\n3. To access company resources and training materials, you will be given access to our course platforms such as:\n\t- Coursera \n\t\tusername: " + in_EmailAddress  + "\n\t\tpassword: " + in_CourseraPassword + "\n\n\t- Codecademy\n\t\tusername: " + in_EmailAddress + "\n\t\tpassword: " + in_CodecademyPassword + "\n\n4. We recommend you to start with the following training courses:\n\n" + CourseSuggestions + "\n\n5. We have also compiled a list of useful links that will help you get settled in: \n" + UsefulLinks + "\n\nPlease let us know if you have any questions or concerns, and we will do our best to assist you. We look forward to working with you and seeing all the great things you will accomplish at Metamarian.\n\nWarm Regards,\nMetamarian"]</InArgument>
+      </Assign.Value>
+    </Assign>
+  </Sequence>
+</Activity>
