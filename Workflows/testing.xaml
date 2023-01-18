@@ -31,7 +31,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="80">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -71,6 +71,8 @@
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="testing" sap:VirtualizedContainerService.HintSize="496,893.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -118,9 +120,9 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_EmailAddress">
           <VisualBasicValue x:TypeArguments="x:String" ExpressionText="email" />
         </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="out_EmailText">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="retText" />
-        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_EmailText">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="retText" />
+        </OutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_CourseraPassword">
           <VisualBasicValue x:TypeArguments="x:String" ExpressionText="pass1" />
         </InArgument>
@@ -131,15 +133,9 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\Story 2\SendEmail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Workflows\Story 2\SendEmail.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="receiverAddress">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="email" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="subject">
-          <Literal x:TypeArguments="x:String">Welcome to Metamarian!</Literal>
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="message">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="retText" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="receiverAddress">[email]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="subject">Welcome to Metamarian!</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="message">[retText]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="attachment">
           <Literal x:TypeArguments="x:String" Value="" />
         </InArgument>

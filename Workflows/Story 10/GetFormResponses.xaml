@@ -1,12 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetFormResponses" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetFormResponses" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_PracticeAccountEmail" Type="InArgument(x:String)" />
     <x:Property Name="in_PracticeAccountPass" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="out_ResponsesFound" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1153.3333333333333,3388.6666666666665</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1399.3333333333333,3840.6666666666665</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetFormResponses_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="84">
@@ -117,22 +118,23 @@
       <AssemblyReference>System.Net.Requests</AssemblyReference>
       <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetFormResponses" sap:VirtualizedContainerService.HintSize="602,3324" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetFormResponses" sap:VirtualizedContainerService.HintSize="660.6666666666666,3776" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="540,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;GetFormResponses workflow has started&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Filă incognito nouă" sap:VirtualizedContainerService.HintSize="540,2941.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="True" ScopeGuid="ffac37c4-9bac-4b20-93f5-7d2f24acd279" Version="V1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="598.6666666666666,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;GetFormResponses workflow has started&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Filă incognito nouă" sap:VirtualizedContainerService.HintSize="598.6666666666666,3393.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="True" ScopeGuid="ffac37c4-9bac-4b20-93f5-7d2f24acd279" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="506,2722" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="564.6666666666666,3174" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="PracticeDT" />
               <Variable x:TypeArguments="x:Int32" Name="lastLine" />
@@ -143,8 +145,8 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="444,84.66666666666667" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://docs.google.com/spreadsheets/d/1xLlWsjq069WGMaLlOqiw4jteMRSORsFblXXgdbwI2-4/edit?resourcekey#gid=1428881436" Version="V1" />
-            <uix:NCheckState DisplayName="Verify if user is already logged in" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="444,1022" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="ffac37c4-9bac-4b20-93f5-7d2f24acd279" Timeout="1" Version="V1">
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="502.6666666666667,84.66666666666667" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://docs.google.com/spreadsheets/d/1xLlWsjq069WGMaLlOqiw4jteMRSORsFblXXgdbwI2-4/edit?resourcekey#gid=1428881436" Version="V1" />
+            <uix:NCheckState DisplayName="Verify if user is already logged in" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="502.6666666666667,1022" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="ffac37c4-9bac-4b20-93f5-7d2f24acd279" Timeout="1" Version="V1">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,800.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <Sequence.Variables>
@@ -191,7 +193,7 @@
                 <uix:TargetAnchorable BrowserURL="https://accounts.google.com/ServiceLogin/identifier?passive=1209600&amp;continue=https%3A%2F%2Fdocs.google.com%2F&amp;followup=https%3A%2F%2Fdocs.google.com%2F&amp;emr=1&amp;ifkv=AeAAQh53RnqLxL1sNo0jsJgPkS7ymjdvGMkBkRFG-83-i0UPzjVdBPoWiLTaFTdh3Lo5YUle32GY&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin" DesignTimeRectangle="686, 490, 546, 78" ElementType="InputBox" FriendlyName="'INPUT identifierId'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' aaname='' /&gt;" Guid="6d1a5c2e-05e7-417e-ae20-57a1bf77289d" ImageBase64="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" InformativeScreenshot="1c8cc3b5c589df0d07cc50905a2b4d8c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Conectează-te – Conturi Google' /&gt;" SearchSteps="FuzzySelector" />
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <ui:GetLastDownloadedFile File="{x:Null}" IgnoreFiles="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[Environment.ExpandEnvironmentVariables(&quot;%USERPROFILE%\Downloads&quot;)]" sap:VirtualizedContainerService.HintSize="444,930.6666666666666" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1">
+            <ui:GetLastDownloadedFile File="{x:Null}" IgnoreFiles="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[Environment.ExpandEnvironmentVariables(&quot;%USERPROFILE%\Downloads&quot;)]" sap:VirtualizedContainerService.HintSize="502.6666666666667,930.6666666666666" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1">
               <ui:GetLastDownloadedFile.Body>
                 <ActivityAction>
                   <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,668.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_8">
@@ -219,9 +221,35 @@
                 </ActivityAction>
               </ui:GetLastDownloadedFile.Body>
             </ui:GetLastDownloadedFile>
-            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="Data/Temp" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[Environment.ExpandEnvironmentVariables(&quot;%USERPROFILE%\Downloads&quot;)  + &quot;\Practice certificate.xlsx&quot;]" />
-            <ui:ReadRange AddHeaders="False" DataTable="[PracticeDT]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="444,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="B2" SheetName="Responses" WorkbookPath="Data\Temp\Practice certificate.xlsx" />
-            <ui:WriteRange AddHeaders="False" DataTable="[PracticeDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="444,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="PracticeForm" StartingCell="B2" WorkbookPath="Data\Input\EmployeesInformations.xlsx" />
+            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="Data/Temp" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="502.6666666666667,164.66666666666666" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[Environment.ExpandEnvironmentVariables(&quot;%USERPROFILE%\Downloads&quot;)  + &quot;\Practice certificate.xlsx&quot;]" />
+            <ui:ReadRange AddHeaders="False" DataTable="[PracticeDT]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="502.6666666666667,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="B2" SheetName="Responses" WorkbookPath="Data\Temp\Practice certificate.xlsx" />
+            <Assign sap:VirtualizedContainerService.HintSize="502.6666666666667,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[out_ResponsesFound]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="502.6666666666667,286.6666666666667" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+              <ui:IfElseIf.ConditionBlocks>
+                <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                  <ui:IfElseIfBlock BlockType="If" Condition="[PracticeDT is Nothing OrElse PracticeDT.RowCount = 0]">
+                    <ui:IfElseIfBlock.Then>
+                      <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[out_ResponsesFound]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                </sc:BindingList>
+              </ui:IfElseIf.ConditionBlocks>
+            </ui:IfElseIf>
+            <ui:WriteRange AddHeaders="False" DataTable="[PracticeDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="502.6666666666667,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="PracticeForm" StartingCell="B2" WorkbookPath="Data\Input\EmployeesInformations.xlsx" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -229,6 +257,6 @@
         <uix:TargetApp Area="-11, -11, 1942, 1042" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="3395eb2bc290b6884384835c7e84777a.png" Selector="&lt;html app='chrome.exe' title='Filă incognito nouă' /&gt;" Url="chrome://newtab/" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="540,96" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;GetFormResponses workflow has ended&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="598.6666666666666,96" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;GetFormResponses workflow has ended&quot;]" />
   </Sequence>
 </Activity>

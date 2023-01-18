@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1399.3333333333333,4282</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1399.3333333333333,4298.666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetCourseSuggestion_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -95,7 +95,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow combines course suggestions based on employee's skills from Coursera and Codecademy (the email is searched in the Excel file and the skills String is transformed in a list of Strings, each reprezenting a skill, then it is performed a search on the mentioned websites and first 3 courses that appear are saved). The output of this workflow is a datatable with 2 columns: CourseName, CourseURL. " DisplayName="GetCourseSuggestion" sap:VirtualizedContainerService.HintSize="882.6666666666666,4217.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow combines course suggestions based on employee's skills from Coursera and Codecademy (the email is searched in the Excel file and the skills String is transformed in a list of Strings, each reprezenting a skill, then it is performed a search on the mentioned websites and first 3 courses that appear are saved). The output of this workflow is a datatable with 2 columns: CourseName, CourseURL. " DisplayName="GetCourseSuggestion" sap:VirtualizedContainerService.HintSize="732.6666666666666,4234" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="excelData" />
       <Variable x:TypeArguments="x:String" Name="employeeSkills">
@@ -114,8 +114,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="820.6666666666666,96" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;GetCourseSuggestion workflow started&quot;]" />
-    <Assign sap:VirtualizedContainerService.HintSize="820.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="670.6666666666666,96" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;GetCourseSuggestion workflow started&quot;]" />
+    <Assign sap:VirtualizedContainerService.HintSize="670.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[excelPath]</OutArgument>
       </Assign.To>
@@ -123,9 +123,9 @@
         <InArgument x:TypeArguments="x:String">Data/Input/EmployeesInformations.xlsx</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:BuildDataTable DataTable="[coursesDatatable]" DisplayName="Build output datatable" sap:VirtualizedContainerService.HintSize="820.6666666666666,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;CourseName&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;CourseURL&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;500&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;CourseName&gt;Emotional Intelligence: Cultivating Immensely Human Interactions&lt;/CourseName&gt;&#xD;&#xA;    &lt;CourseURL&gt;https://www.coursera.org/learn/emotional-intelligence-cultivating-immensely-human-interactions&lt;/CourseURL&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;CourseName&gt;How to manage your time more effectively&lt;/CourseName&gt;&#xD;&#xA;    &lt;CourseURL&gt;https://ed.ted.com/lessons/how-to-manage-your-time-more-effectively-according-to-machines-brian-christian&lt;/CourseURL&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[excelData]" DisplayName="Read Employees Excel" sap:VirtualizedContainerService.HintSize="820.6666666666666,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Employees" WorkbookPath="[excelPath]" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[excelData]" DisplayName="Find current employee's skills in Excel file" sap:VirtualizedContainerService.HintSize="820.6666666666666,774.6666666666666" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:BuildDataTable DataTable="[coursesDatatable]" DisplayName="Build output datatable" sap:VirtualizedContainerService.HintSize="670.6666666666666,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;CourseName&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;CourseURL&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;500&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;CourseName&gt;Emotional Intelligence: Cultivating Immensely Human Interactions&lt;/CourseName&gt;&#xA;    &lt;CourseURL&gt;https://www.coursera.org/learn/emotional-intelligence-cultivating-immensely-human-interactions&lt;/CourseURL&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;CourseName&gt;How to manage your time more effectively&lt;/CourseName&gt;&#xA;    &lt;CourseURL&gt;https://ed.ted.com/lessons/how-to-manage-your-time-more-effectively-according-to-machines-brian-christian&lt;/CourseURL&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[excelData]" DisplayName="Read Employees Excel" sap:VirtualizedContainerService.HintSize="670.6666666666666,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Employees" WorkbookPath="[excelPath]" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[excelData]" DisplayName="Find current employee's skills in Excel file" sap:VirtualizedContainerService.HintSize="670.6666666666666,774.6666666666666" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -164,12 +164,12 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <If Condition="[employeeSkills = &quot;&quot;]" DisplayName="Check if employee skills have been found" sap:VirtualizedContainerService.HintSize="820.6666666666666,2032.6666666666667" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[employeeSkills = &quot;&quot;]" DisplayName="Check if employee skills have been found" sap:VirtualizedContainerService.HintSize="670.6666666666666,2032.6666666666667" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Given employee email is not existing in the Excel file&quot;]" />
       </If.Then>
       <If.Else>
-        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="742,1750" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="547.3333333333334,1750" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
           <ui:IfElseIf.ConditionBlocks>
             <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
               <ui:IfElseIfBlock BlockType="If" Condition="[employeeSkills = &quot;None&quot;]">
@@ -253,7 +253,7 @@
         </ui:IfElseIf>
       </If.Else>
     </If>
-    <Assign sap:VirtualizedContainerService.HintSize="820.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
+    <Assign sap:VirtualizedContainerService.HintSize="670.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_courseSuggestions]</OutArgument>
       </Assign.To>
@@ -263,7 +263,7 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[coursesDatatable]" DisplayName="Add Codecademy's courses in the output datatable" sap:VirtualizedContainerService.HintSize="820.6666666666666,406.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[coursesDatatable]" DisplayName="Add Codecademy's courses in the output datatable" sap:VirtualizedContainerService.HintSize="670.6666666666666,406.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -279,7 +279,7 @@
                         <OutArgument x:TypeArguments="x:String">[out_courseSuggestions]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[out_courseSuggestions + "\t- " + CurrentRow(0).ToString+ " - " + CurrentRow(1).ToString + "\n"]</InArgument>
+                        <InArgument x:TypeArguments="x:String" xml:space="preserve">[out_courseSuggestions + "    - " + CurrentRow(0).ToString+ " - " + CurrentRow(1).ToString + Environment.NewLine]</InArgument>
                       </Assign.Value>
                     </Assign>
                   </ui:IfElseIfBlock.Then>
@@ -290,6 +290,6 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="820.6666666666666,96" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;GetCourseSuggestion workflow ended&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="670.6666666666666,96" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;GetCourseSuggestion workflow ended&quot;]" />
   </Sequence>
 </Activity>
