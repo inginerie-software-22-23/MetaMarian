@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
@@ -9,7 +9,7 @@
   <sap:VirtualizedContainerService.HintSize>1399.3333333333333,1292.6666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="29">
+    <scg:List x:TypeArguments="x:String" Capacity="58">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -39,10 +39,11 @@
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="43">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="86">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -85,6 +86,9 @@
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="441.3333333333333,1228" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -104,10 +108,24 @@
     <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="379.3333333333333,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Receives mail and verifies if it was sent correctly&#xA;If not sends a mail back with the mistake" DisplayName="Workflows\Story 3\CheckInfo_ComposeEmail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379.3333333333333,160.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\Story 3\CheckInfo_ComposeEmail.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:Int32" x:Key="out_errorCode">[CheckEmailErrorCode]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_emailAddress">[EmailAddress]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_responseEmail">[EmailText]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_contract_path">[ContractPath]</OutArgument>
+        <OutArgument x:TypeArguments="x:Int32" x:Key="out_errorCode">
+          <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="CheckEmailErrorCode" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_emailAddress">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="EmailAddress" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_responseEmail">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="EmailText" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_contract_path">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="ContractPath" />
+        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Username">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;HRCredentials_user&quot;).ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="ss:SecureString" x:Key="in_Password">
+          <VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="CType(in_Config(&quot;HRCredentials_user&quot;), System.Security.SecureString)" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
