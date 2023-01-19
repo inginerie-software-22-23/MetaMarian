@@ -1,13 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="GetCourseSuggestion" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_excelPath" Type="InArgument(x:String)" />
     <x:Property Name="in_employeeEmail" Type="InArgument(x:String)" />
-    <x:Property Name="out_coursesDatatable" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="out_courseSuggestions" Type="OutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>904,4336.666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1399.3333333333333,4298.666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetCourseSuggestion_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -46,7 +45,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="47">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="94">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -93,9 +92,10 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow combines course suggestions based on employee's skills from Coursera and Codecademy (the email is searched in the Excel file and the skills String is transformed in a list of Strings, each reprezenting a skill, then it is performed a search on the mentioned websites and first 3 courses that appear are saved). The output of this workflow is a datatable with 2 columns: CourseName, CourseURL. " DisplayName="GetCourseSuggestion" sap:VirtualizedContainerService.HintSize="692,4272" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow combines course suggestions based on employee's skills from Coursera and Codecademy (the email is searched in the Excel file and the skills String is transformed in a list of Strings, each reprezenting a skill, then it is performed a search on the mentioned websites and first 3 courses that appear are saved). The output of this workflow is a datatable with 2 columns: CourseName, CourseURL. " DisplayName="GetCourseSuggestion" sap:VirtualizedContainerService.HintSize="732.6666666666666,4234" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="excelData" />
       <Variable x:TypeArguments="x:String" Name="employeeSkills">
@@ -105,6 +105,8 @@
       </Variable>
       <Variable x:TypeArguments="s:String[]" Name="employeeSkillsList" />
       <Variable x:TypeArguments="x:Int32" Default="3" Name="noCoursesEachSite" />
+      <Variable x:TypeArguments="x:String" Name="excelPath" />
+      <Variable x:TypeArguments="sd:DataTable" Name="coursesDatatable" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -112,30 +114,38 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="630,104.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;GetCourseSuggestion workflow started&quot;]" />
-    <ui:BuildDataTable DataTable="[out_coursesDatatable]" DisplayName="Build output datatable" sap:VirtualizedContainerService.HintSize="630,68.66666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;CourseName&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;CourseURL&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;CourseName /&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[excelData]" DisplayName="Read Employees Excel" sap:VirtualizedContainerService.HintSize="630,96.66666666666667" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Employees" WorkbookPath="[in_excelPath]" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[excelData]" DisplayName="Find current employee's skills in Excel file" sap:VirtualizedContainerService.HintSize="630,786" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="670.6666666666666,96" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;GetCourseSuggestion workflow started&quot;]" />
+    <Assign sap:VirtualizedContainerService.HintSize="670.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[excelPath]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Data/Input/EmployeesInformations.xlsx</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:BuildDataTable DataTable="[coursesDatatable]" DisplayName="Build output datatable" sap:VirtualizedContainerService.HintSize="670.6666666666666,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;CourseName&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;CourseURL&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;500&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;CourseName&gt;Emotional Intelligence: Cultivating Immensely Human Interactions&lt;/CourseName&gt;&#xA;    &lt;CourseURL&gt;https://www.coursera.org/learn/emotional-intelligence-cultivating-immensely-human-interactions&lt;/CourseURL&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;CourseName&gt;How to manage your time more effectively&lt;/CourseName&gt;&#xA;    &lt;CourseURL&gt;https://ed.ted.com/lessons/how-to-manage-your-time-more-effectively-according-to-machines-brian-christian&lt;/CourseURL&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[excelData]" DisplayName="Read Employees Excel" sap:VirtualizedContainerService.HintSize="670.6666666666666,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Employees" WorkbookPath="[excelPath]" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[excelData]" DisplayName="Find current employee's skills in Excel file" sap:VirtualizedContainerService.HintSize="670.6666666666666,774.6666666666666" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="544.6666666666666,657.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="636.6666666666666,654.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[CurrentRow(&quot;Email address&quot;).ToString = in_employeeEmail]" sap:VirtualizedContainerService.HintSize="482.6666666666667,535.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[CurrentRow(&quot;Email address&quot;).ToString = in_employeeEmail]" sap:VirtualizedContainerService.HintSize="574.6666666666666,544" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence DisplayName="Employee found" sap:VirtualizedContainerService.HintSize="400,266" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Employee found" sap:VirtualizedContainerService.HintSize="496,261.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="338,72" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[employeeSkills]</OutArgument>
                     </Assign.To>
@@ -143,33 +153,33 @@
                       <InArgument x:TypeArguments="x:String">[CurrentRow("Useful skills").ToString]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:Break sap:VirtualizedContainerService.HintSize="338,32" sap2010:WorkflowViewState.IdRef="Break_1" />
+                  <ui:Break sap:VirtualizedContainerService.HintSize="434,25.333333333333332" sap2010:WorkflowViewState.IdRef="Break_1" />
                 </Sequence>
               </If.Then>
               <If.Else>
-                <ui:Continue sap:VirtualizedContainerService.HintSize="334,32" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                <ui:Continue sap:VirtualizedContainerService.HintSize="334,25.333333333333332" sap2010:WorkflowViewState.IdRef="Continue_1" />
               </If.Else>
             </If>
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <If Condition="[employeeSkills = &quot;&quot;]" DisplayName="Check if employee skills have been found" sap:VirtualizedContainerService.HintSize="630,2114" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[employeeSkills = &quot;&quot;]" DisplayName="Check if employee skills have been found" sap:VirtualizedContainerService.HintSize="670.6666666666666,2032.6666666666667" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,104.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Given employee email is not existing in the Excel file&quot;]" />
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Given employee email is not existing in the Excel file&quot;]" />
       </If.Then>
       <If.Else>
-        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="547.3333333333334,1840" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="547.3333333333334,1750" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
           <ui:IfElseIf.ConditionBlocks>
             <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
               <ui:IfElseIfBlock BlockType="If" Condition="[employeeSkills = &quot;None&quot;]">
                 <ui:IfElseIfBlock.Then>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,96.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Given employee has no skills introduced  in the Excel file&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Given employee has no skills introduced  in the Excel file&quot;]" />
                 </ui:IfElseIfBlock.Then>
               </ui:IfElseIfBlock>
               <ui:IfElseIfBlock BlockType="Else">
                 <ui:IfElseIfBlock.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="496,1496.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence sap:VirtualizedContainerService.HintSize="496,1424" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="coursesCourseraDatatable" />
                       <Variable x:TypeArguments="sd:DataTable" Name="coursesCodecademyDatatable" />
@@ -179,7 +189,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="434,72" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
                       <Assign.To>
                         <OutArgument x:TypeArguments="s:String[]">[employeeSkillsList]</OutArgument>
                       </Assign.To>
@@ -187,50 +197,50 @@
                         <InArgument x:TypeArguments="s:String[]">[employeeSkills.Split(",")]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\Story 6\GetCourseSuggestionCoursera.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Workflows\Story 6\GetCourseSuggestionCoursera.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\Story 6\GetCourseSuggestionCoursera.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Workflows\Story 6\GetCourseSuggestionCoursera.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="s:String[]" x:Key="in_employeeSkills">[employeeSkillsList]</InArgument>
                         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_coursesCourseraDatatable">[coursesCourseraDatatable]</OutArgument>
                         <InArgument x:TypeArguments="x:Int32" x:Key="in_noCourses">[noCoursesEachSite]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\Story 6\GetCourseSuggestionCodecademy.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Workflows\Story 6\GetCourseSuggestionCodecademy.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\Story 6\GetCourseSuggestionCodecademy.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Workflows\Story 6\GetCourseSuggestionCodecademy.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_coursesCodecademyDatatable">[coursesCodecademyDatatable]</OutArgument>
                         <InArgument x:TypeArguments="s:String[]" x:Key="in_employeeSkills">[employeeSkillsList]</InArgument>
                         <InArgument x:TypeArguments="x:Int32" x:Key="in_noCourses">[noCoursesEachSite]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[coursesCourseraDatatable]" DisplayName="Add Coursera's courses in the output datatable" sap:VirtualizedContainerService.HintSize="434,447.3333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[coursesCourseraDatatable]" DisplayName="Add Coursera's courses in the output datatable" sap:VirtualizedContainerService.HintSize="434,418.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,322" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,302" sap2010:WorkflowViewState.IdRef="Sequence_14">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray]" DataTable="[out_coursesDatatable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="338,200" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray]" DataTable="[coursesDatatable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="338,191.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
                           </Sequence>
                         </ActivityAction>
                       </ui:ForEachRow.Body>
                     </ui:ForEachRow>
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[coursesCodecademyDatatable]" DisplayName="Add Codecademy's courses in the output datatable" sap:VirtualizedContainerService.HintSize="434,447.3333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[coursesCodecademyDatatable]" DisplayName="Add Codecademy's courses in the output datatable" sap:VirtualizedContainerService.HintSize="434,418.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,322" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,302" sap2010:WorkflowViewState.IdRef="Sequence_15">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray]" DataTable="[out_coursesDatatable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="338,200" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray]" DataTable="[coursesDatatable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="338,191.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
                           </Sequence>
                         </ActivityAction>
                       </ui:ForEachRow.Body>
@@ -243,34 +253,43 @@
         </ui:IfElseIf>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="630,104.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;GetCourseSuggestion workflow ended&quot;]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="630,556.6666666666666" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,468" sap2010:WorkflowViewState.IdRef="Sequence_17">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[out_coursesDatatable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,346" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
-            <ui:ForEachRow.Body>
-              <ActivityAction x:TypeArguments="sd:DataRow">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,220.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,98.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CurrentRow(&quot;CourseName&quot;).ToString +  &quot; &quot; + CurrentRow(&quot;CourseURL&quot;).ToString]" />
-                </Sequence>
-              </ActivityAction>
-            </ui:ForEachRow.Body>
-          </ui:ForEachRow>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
+    <Assign sap:VirtualizedContainerService.HintSize="670.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[out_courseSuggestions]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[coursesDatatable]" DisplayName="Add Codecademy's courses in the output datatable" sap:VirtualizedContainerService.HintSize="670.6666666666666,406.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="485.3333333333333,286.6666666666667" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
+            <ui:IfElseIf.ConditionBlocks>
+              <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                <ui:IfElseIfBlock BlockType="If" Condition="[CurrentRow(0).ToString &lt;&gt; &quot;&quot;]">
+                  <ui:IfElseIfBlock.Then>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[out_courseSuggestions]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String" xml:space="preserve">[out_courseSuggestions + "    - " + CurrentRow(0).ToString+ " - " + CurrentRow(1).ToString + Environment.NewLine]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </ui:IfElseIfBlock.Then>
+                </ui:IfElseIfBlock>
+              </sc:BindingList>
+            </ui:IfElseIf.ConditionBlocks>
+          </ui:IfElseIf>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="670.6666666666666,96" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;GetCourseSuggestion workflow ended&quot;]" />
   </Sequence>
 </Activity>

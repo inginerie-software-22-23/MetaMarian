@@ -1,11 +1,13 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="CreateAccountsForEmployee" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_emailAddress" Type="InArgument(x:String)" />
+    <x:Property Name="io_CodecademyAccountPassword" Type="InOutArgument(x:String)" />
+    <x:Property Name="io_CourseraAccountPassword" Type="InOutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>625.3333333333334,1074</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1399.3333333333333,1185.3333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CreateAccountsForEmployee_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -74,7 +76,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow will call the other workflows that create accounts for a new employee on different elearning platforms" DisplayName="CreateAccountsForEmployee" sap:VirtualizedContainerService.HintSize="441.3333333333333,1009.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow will call the other workflows that create accounts for a new employee on different elearning platforms" DisplayName="CreateAccountsForEmployee" sap:VirtualizedContainerService.HintSize="441.3333333333333,919.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="firstName" />
       <Variable x:TypeArguments="x:String" Name="lastName" />
@@ -86,35 +88,41 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.3333333333333,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;CreateAccountsForEmployee worflow has started!&quot;]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\Story 8\CreateCodecademyAccount.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Story 8\CreateCodecademyAccount.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_emailAddress">[in_emailAddress]</InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="379.3333333333333,25.333333333333332" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="441.3333333333333,226" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\Story 8\CreateCodecademyAccount.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Story 8\CreateCodecademyAccount.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_emailAddress">[in_emailAddress]</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="out_CodecademyAccountPassword">[io_CodecademyAccountPassword]</OutArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get employee First Name" sap:VirtualizedContainerService.HintSize="379.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Workflows\Story 2\GetEmployeeInfo.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="email">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_emailAddress" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="column">
-          <Literal x:TypeArguments="x:String">First Name</Literal>
-        </InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="result">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="firstName" />
-        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="email">[in_emailAddress]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="column">First Name</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="result">[firstName]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get employee Last Name" sap:VirtualizedContainerService.HintSize="379.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Workflows\Story 2\GetEmployeeInfo.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="email">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_emailAddress" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="column">
-          <Literal x:TypeArguments="x:String">Last Name</Literal>
-        </InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="result">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="lastName" />
-        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="email">[in_emailAddress]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="column">Last Name</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="result">[lastName]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\Story 8\CreateCourseraAccount.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\Story 8\CreateCourseraAccount.xaml">
@@ -122,6 +130,7 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_lastName">[lastName]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_firstName">[firstName]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_emailAddress">[in_emailAddress]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_CourseraAccountPassword">[io_CourseraAccountPassword]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="379.3333333333333,96" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;CreateAccountsForEmployee worflow has ended!&quot;]" />
