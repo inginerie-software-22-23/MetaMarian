@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetTransactionData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetTransactionData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Sequential counter of transaction items." Name="in_TransactionNumber" Type="InArgument(x:Int32)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
@@ -7,14 +7,18 @@
     <x:Property sap2010:Annotation.AnnotationText="Allow the optional addition of information about the transaction item." Name="out_TransactionField2" Type="OutArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="Transaction ID used for information and logging purposes. Ideally, the ID should be unique for each transaction. " Name="out_TransactionID" Type="OutArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="This variable can be used in case transactions are stored in a DataTable (for example, after being retrieved from a spreadsheet)." Name="io_dt_TransactionData" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="out_EmailList" Type="InArgument(scg:List(snm:MailMessage))" />
   </x:Members>
+  <this:GetTransactionData.out_EmailList>
+    <InArgument x:TypeArguments="scg:List(snm:MailMessage)" />
+  </this:GetTransactionData.out_EmailList>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1596,1574</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1399.3333333333333,2534</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="37">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -46,10 +50,16 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
-    </sco:Collection>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -81,30 +91,126 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="544.6666666666666,1509.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="678,2469.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Get Transaction Item" sap:VirtualizedContainerService.HintSize="482.6666666666667,104.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Get the transaction item&quot;]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="482.6666666666667,32" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:LogMessage DisplayName="Log Message Get Transaction Item" sap:VirtualizedContainerService.HintSize="616,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Get the transaction item&quot;]" />
+    <Assign sap:VirtualizedContainerService.HintSize="616,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_11">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[out_TransactionItem]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[in_Config(&quot;HRCredentials_user&quot;).ToString]" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="616,25.333333333333332" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="True" Messages="[out_EmailList]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Port="993" SecureConnection="Auto" SecurePassword="[CType(in_Config(&quot;HRCredentials_pass&quot;), System.Security.SecureString)]" Server="imap.gmail.com" Top="30" />
+    <ui:IfElseIf DisplayName="If there are any new mails" sap:VirtualizedContainerService.HintSize="616,876" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+      <ui:IfElseIf.ConditionBlocks>
+        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+          <ui:IfElseIfBlock BlockType="If" Condition="[out_EmailList.Count &lt;&gt; 0]">
+            <ui:IfElseIfBlock.Then>
+              <Assign DisplayName="First functionality" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[out_TransactionItem]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">mails</InArgument>
+                </Assign.Value>
+              </Assign>
+            </ui:IfElseIfBlock.Then>
+          </ui:IfElseIfBlock>
+          <ui:IfElseIfBlock BlockType="Else">
+            <ui:IfElseIfBlock.Then>
+              <Sequence DisplayName="If no mails were found" sap:VirtualizedContainerService.HintSize="564.6666666666666,552.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:Boolean" Name="FormResponsesFound" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\Story 10\GetFormResponses.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="502.6666666666667,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Story 10\GetFormResponses.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_PracticeAccountEmail">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;PCCredentials_user&quot;).ToString" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="ss:SecureString" x:Key="in_PracticeAccountPass">
+                      <VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="CType(in_Config(&quot;PCCredentials_pass&quot;), System.Security.SecureString)" />
+                    </InArgument>
+                    <OutArgument x:TypeArguments="x:Boolean" x:Key="out_ResponsesFound">
+                      <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="FormResponsesFound" />
+                    </OutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="502.6666666666667,286.6666666666667" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                  <ui:IfElseIf.ConditionBlocks>
+                    <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                      <ui:IfElseIfBlock BlockType="If" Condition="[FormResponsesFound]">
+                        <ui:IfElseIfBlock.Then>
+                          <Assign DisplayName="Second functionality" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_10">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[out_TransactionItem]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">form responses</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </ui:IfElseIfBlock.Then>
+                      </ui:IfElseIfBlock>
+                    </sc:BindingList>
+                  </ui:IfElseIf.ConditionBlocks>
+                </ui:IfElseIf>
+              </Sequence>
+            </ui:IfElseIfBlock.Then>
+          </ui:IfElseIfBlock>
+        </sc:BindingList>
+      </ui:IfElseIf.ConditionBlocks>
+    </ui:IfElseIf>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="616,25.333333333333332" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="542.6666666666666,888.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="542.6666666666666,868.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:RetryScope DisplayName="Retry Get transaction item" sap:VirtualizedContainerService.HintSize="480.6666666666667,766.6666666666666" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[Cint(in_Config(&quot;RetryNumberGetTransactionItem&quot;))]">
+          <ui:RetryScope DisplayName="Retry Get transaction item" sap:VirtualizedContainerService.HintSize="480.6666666666667,736.6666666666666" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[Cint(in_Config(&quot;RetryNumberGetTransactionItem&quot;))]">
             <ui:RetryScope.ActivityBody>
               <ActivityAction>
-                <TryCatch DisplayName="Try Catch Get transaction item" sap:VirtualizedContainerService.HintSize="438.6666666666667,579.3333333333334" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                <TryCatch DisplayName="Try Catch Get transaction item" sap:VirtualizedContainerService.HintSize="438.6666666666667,558" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                   <TryCatch.Try>
-                    <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Get a transaction item from the specified Orchestrator queue.&#xA;If queues are not used in this process, replace this activity with the appropriated logic to retrieve transaction items.&#xA;For example, if transactions are rows from a DataTable, the row corresponding to the current transaction is retrieved at this point." DisplayName="Get transaction item" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334,331.3333333333333" sap2010:WorkflowViewState.IdRef="GetQueueItem_2" QueueType="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" TransactionItem="[out_TransactionItem]">
+                    <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Get a transaction item from the specified Orchestrator queue.&#xA;If queues are not used in this process, replace this activity with the appropriated logic to retrieve transaction items.&#xA;For example, if transactions are rows from a DataTable, the row corresponding to the current transaction is retrieved at this point." DisplayName="Get transaction item" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334,318.6666666666667" sap2010:WorkflowViewState.IdRef="GetQueueItem_2" QueueType="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" TransactionItem="[out_TransactionItem]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -152,29 +258,23 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Assign DisplayName="Assign TransactionItem" sap:VirtualizedContainerService.HintSize="482.6666666666667,72" sap2010:WorkflowViewState.IdRef="Assign_8">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[out_TransactionItem]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">This string is useless, it just needs to be not null</InArgument>
-      </Assign.Value>
-    </Assign>
-    <If sap2010:Annotation.AnnotationText="This optional step can be used to include more information about a transaction item and it is used mainly for logging and visualization purposes.&#xA;For example, if transaction items are invoices, then out_TransactionID can be the invoice number, out_TransactionField1 can be the invoice date and out_TransactionField2 can be the invoice amount." Condition="[out_TransactionItem isNot Nothing]" DisplayName="If a new transaction item is retrieved, get additional information about it" sap:VirtualizedContainerService.HintSize="482.6666666666667,813.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
+    <If sap2010:Annotation.AnnotationText="This optional step can be used to include more information about a transaction item and it is used mainly for logging and visualization purposes.&#xA;For example, if transaction items are invoices, then out_TransactionID can be the invoice number, out_TransactionField1 can be the invoice date and out_TransactionField2 can be the invoice amount." Condition="[out_TransactionItem isNot Nothing]" DisplayName="If a new transaction item is retrieved, get additional information about it" sap:VirtualizedContainerService.HintSize="616,838.6666666666666" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap2010:Annotation.AnnotationText="Write data to the added log fields that identify the transaction." DisplayName="Add transaction information to log fields" sap:VirtualizedContainerService.HintSize="400,448.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap2010:Annotation.AnnotationText="Write data to the added log fields that identify the transaction." DisplayName="Add transaction information to log fields" sap:VirtualizedContainerService.HintSize="496,477.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Assign out_TransactionID" sap:VirtualizedContainerService.HintSize="338,72" sap2010:WorkflowViewState.IdRef="Assign_5">
+          <Assign DisplayName="Assign out_TransactionID" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[out_TransactionID]</OutArgument>
             </Assign.To>
@@ -182,7 +282,7 @@
               <InArgument x:TypeArguments="x:String">[now.ToString]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign DisplayName="Assign out_TransactionField1" sap:VirtualizedContainerService.HintSize="338,72" sap2010:WorkflowViewState.IdRef="Assign_6">
+          <Assign DisplayName="Assign out_TransactionField1" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[out_TransactionField1]</OutArgument>
             </Assign.To>
@@ -190,7 +290,7 @@
               <InArgument x:TypeArguments="x:String">[string.Empty]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign DisplayName="Assign out_TransactionField2" sap:VirtualizedContainerService.HintSize="338,72" sap2010:WorkflowViewState.IdRef="Assign_7">
+          <Assign DisplayName="Assign out_TransactionField2" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[out_TransactionField2]</OutArgument>
             </Assign.To>
