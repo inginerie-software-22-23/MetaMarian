@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1058.618181818182,1951.418181818182</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>832,1976.6666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetFormInformation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -50,7 +50,7 @@
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="45">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="90">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -95,9 +95,12 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetFormInformation" sap:VirtualizedContainerService.HintSize="731.3454545454546,1886.8363636363638" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetFormInformation" sap:VirtualizedContainerService.HintSize="732.6666666666666,1912" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="inputTable" />
     </Sequence.Variables>
@@ -106,8 +109,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="669.3818181818182,94.25454545454546" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;GetFormInformation workflow started&quot;]" />
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[inputTable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="669.3818181818182,87.27272727272728" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="PracticeForm" WorkbookPath="Data/Input/EmployeesInformations.xlsx">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="670.6666666666666,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;GetFormInformation workflow started&quot;]" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[inputTable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="670.6666666666666,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="PracticeForm" WorkbookPath="Data/Input/EmployeesInformations.xlsx">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -115,27 +118,27 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[inputTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="669.3818181818182,1380.6545454545455" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[inputTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="670.6666666666666,1401.3333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="635.3454545454546,1262.8363636363638" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="636.6666666666666,1281.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[CurrentRow(&quot;Address&quot;).ToString = in_email]" sap:VirtualizedContainerService.HintSize="573.3818181818182,1152.8727272727274" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[CurrentRow(&quot;E-mail address&quot;).ToString = in_email]" sap:VirtualizedContainerService.HintSize="574.6666666666666,1170.6666666666667" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence DisplayName="Employee's response was found" sap:VirtualizedContainerService.HintSize="495.70909090909095,872.7272727272727" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Employee's response was found" sap:VirtualizedContainerService.HintSize="496,888" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="433.74545454545455,82.90909090909092" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[out_faculty]</OutArgument>
                     </Assign.To>
@@ -143,7 +146,7 @@
                       <InArgument x:TypeArguments="x:String">[CurrentRow("Faculty").ToString]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="433.74545454545455,82.90909090909092" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[out_university]</OutArgument>
                     </Assign.To>
@@ -151,7 +154,7 @@
                       <InArgument x:TypeArguments="x:String">[CurrentRow("University").ToString]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="433.74545454545455,82.90909090909092" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[out_group]</OutArgument>
                     </Assign.To>
@@ -159,7 +162,7 @@
                       <InArgument x:TypeArguments="x:String">[CurrentRow("Group").ToString]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="433.74545454545455,82.90909090909092" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[out_year]</OutArgument>
                     </Assign.To>
@@ -167,7 +170,7 @@
                       <InArgument x:TypeArguments="x:String">[CurrentRow("Year of studies").ToString]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="433.74545454545455,82.90909090909092" sap2010:WorkflowViewState.IdRef="Assign_5">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[out_degree]</OutArgument>
                     </Assign.To>
@@ -175,7 +178,7 @@
                       <InArgument x:TypeArguments="x:String">[CurrentRow("Field of study(specialization)").ToString]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="433.74545454545455,82.90909090909092" sap2010:WorkflowViewState.IdRef="Assign_6">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[out_hours]</OutArgument>
                     </Assign.To>
@@ -183,7 +186,7 @@
                       <InArgument x:TypeArguments="x:String">[CurrentRow("Number of practical hours required").ToString]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:Break sap:VirtualizedContainerService.HintSize="433.74545454545455,24.436363636363637" sap2010:WorkflowViewState.IdRef="Break_1" />
+                  <ui:Break sap:VirtualizedContainerService.HintSize="434,25.333333333333332" sap2010:WorkflowViewState.IdRef="Break_1" />
                 </Sequence>
               </If.Then>
             </If>
@@ -191,6 +194,6 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="669.3818181818182,94.25454545454546" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;GetFormInformation workflow ended&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="670.6666666666666,96" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;GetFormInformation workflow ended&quot;]" />
   </Sequence>
 </Activity>
