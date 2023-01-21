@@ -1,4 +1,4 @@
-name: Integration test phase workflow
+name: Main pipeline
 
 on:
   push:
