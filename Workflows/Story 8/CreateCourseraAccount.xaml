@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>529.6,4352</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>873.3333333333334,3786</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CreateCourseraAccount_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -86,7 +86,7 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow should create an account on Coursera platfrom for a new employee" DisplayName="CreateCourseraAccount" sap:VirtualizedContainerService.HintSize="540,4287.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow should create an account on Coursera platfrom for a new employee" DisplayName="CreateCourseraAccount" sap:VirtualizedContainerService.HintSize="540.6666666666666,3721.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="password" />
       <Variable x:TypeArguments="x:Boolean" Name="continueButtonExistence" />
@@ -98,25 +98,25 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="477.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;CreateCourseraAccount worflow has started!&quot;]" />
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="477.6,239.2" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="https://www.coursera.org/?irclickid=XI-2w2U20xyNW3NRaKW%3ApUrLUkA2o6WpG14CyU0&amp;irgwc=1&amp;utm_medium=partners&amp;utm_source=impact&amp;utm_campaign=1999373&amp;utm_content=b2c">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.6666666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;CreateCourseraAccount worflow has started!&quot;]" />
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="478.6666666666667,240" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="https://www.coursera.org/?irclickid=XI-2w2U20xyNW3NRaKW%3ApUrLUkA2o6WpG14CyU0&amp;irgwc=1&amp;utm_medium=partners&amp;utm_source=impact&amp;utm_campaign=1999373&amp;utm_content=b2c">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,136.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="337.6,24.8" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="338,25.333333333333332" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
           </Sequence>
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
-    <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'IMG'" sap:VirtualizedContainerService.HintSize="477.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+    <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'IMG'" sap:VirtualizedContainerService.HintSize="478.6666666666667,107.33333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
       <ui:UiElementExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c6be7811-805d-4dc8-aa7d-f57531381384" InformativeScreenshot="435241619bc481cf7ea5e616cc848a40" Selector="&lt;html app='chrome.exe' title='Coursera | Online Courses &amp;amp; Credentials From Top Educators. Join for Free' /&gt;&lt;webctrl tag='IMG' aaname='Coursera' idx='1' /&gt;">
           <ui:Target.TimeoutMS>
@@ -128,7 +128,7 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="477.6,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="478.6666666666667,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -150,7 +150,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  name'" sap:VirtualizedContainerService.HintSize="477.6,156" sap2010:WorkflowViewState.IdRef="SetValue_4" Text="[in_firstName + &quot; &quot; +in_lastName]">
+    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  name'" sap:VirtualizedContainerService.HintSize="478.6666666666667,157.33333333333334" sap2010:WorkflowViewState.IdRef="SetValue_4" Text="[in_firstName + &quot; &quot; +in_lastName]">
       <ui:SetValue.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="decc8469-867c-4b69-a5ab-a3a137fd7856" InformativeScreenshot="65289e48b8efbd9260df268ad0535849" Selector="&lt;html app='chrome.exe' title='Coursera | Online Courses &amp;amp; Credentials From Top Educators. Join for Free' /&gt;&lt;webctrl tag='INPUT' aaname='Full Name' /&gt;">
           <ui:Target.TimeoutMS>
@@ -162,7 +162,7 @@
         </ui:Target>
       </ui:SetValue.Target>
     </ui:SetValue>
-    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  email'" sap:VirtualizedContainerService.HintSize="477.6,156" sap2010:WorkflowViewState.IdRef="SetValue_5" Text="[in_emailAddress]">
+    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  email'" sap:VirtualizedContainerService.HintSize="478.6666666666667,157.33333333333334" sap2010:WorkflowViewState.IdRef="SetValue_5" Text="[in_emailAddress]">
       <ui:SetValue.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="925d6c27-b368-4e6a-868a-b98c3fe23fa4" InformativeScreenshot="afbe0fc3b709635a39768e6e90c9f3b6" Selector="&lt;html app='chrome.exe' title='Coursera | Online Courses &amp;amp; Credentials From Top Educators. Join for Free' /&gt;&lt;webctrl tag='INPUT' aaname='Email' /&gt;">
           <ui:Target.TimeoutMS>
@@ -174,12 +174,12 @@
         </ui:Target>
       </ui:SetValue.Target>
     </ui:SetValue>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\Story 8\GenerateRandomPassword.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="477.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\Story 8\GenerateRandomPassword.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\Story 8\GenerateRandomPassword.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="478.6666666666667,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\Story 8\GenerateRandomPassword.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:String" x:Key="out_password">[password]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  password'" sap:VirtualizedContainerService.HintSize="477.6,156" sap2010:WorkflowViewState.IdRef="SetValue_6" Text="[password]">
+    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  password'" sap:VirtualizedContainerService.HintSize="478.6666666666667,157.33333333333334" sap2010:WorkflowViewState.IdRef="SetValue_6" Text="[password]">
       <ui:SetValue.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a11a5514-0ebc-4b40-939f-0efcc5460469" InformativeScreenshot="07e2a09351de9df55a4ca5c741529d84" Selector="&lt;html app='chrome.exe' title='Coursera | Online Courses &amp;amp; Credentials From Top Educators. Join for Free' /&gt;&lt;webctrl tag='INPUT' aaname='Password' /&gt;">
           <ui:Target.TimeoutMS>
@@ -191,7 +191,7 @@
         </ui:Target>
       </ui:SetValue.Target>
     </ui:SetValue>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="477.6,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="478.6666666666667,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -213,7 +213,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="477.6,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="478.6666666666667,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -235,7 +235,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="477.6,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="478.6666666666667,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -257,7 +257,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="477.6,107.2" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="478.6666666666667,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -279,82 +279,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe Coursera'" sap:VirtualizedContainerService.HintSize="477.6,156" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="[MouseButton.BTN_LEFT]">
-      <ui:ClickImage.CursorPosition>
-        <ui:CursorPosition Position="Center">
-          <ui:CursorPosition.OffsetX>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:CursorPosition.OffsetX>
-          <ui:CursorPosition.OffsetY>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:CursorPosition.OffsetY>
-        </ui:CursorPosition>
-      </ui:ClickImage.CursorPosition>
-      <ui:ClickImage.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABIAAAAdCAYAAACnmDyCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACiSURBVEhL7c7NEQIhDIZhWvAqP4GO6GYXC7UPKkC+OFEOK1m9yuEZJpB9Z02ttf3qfkkvK3RshXQrpJuGcs4q2Z2G4OhjMe6pIdAicCoEswicDsGnCHwVmlkh3b+EgveNQmg4IxFz1vLsneM3nKnfQ+xz2bZG/T3Y5z3uTIqRFxGQGGaBEJbd1b5D+84hwIygGf8GJ+BuhIB8CLdSOCBzImoPU7ONM3eUAVAAAAAASUVORK5CYII=" />
-      </ui:ClickImage.Image>
-      <ui:ClickImage.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="633ad153-5fff-4429-b71b-6e2cdd5a1061" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Coursera | Online Courses From Top Universities. Join for Free –*' /&gt;">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
-          <ui:Target.WaitForReady>
-            <InArgument x:TypeArguments="ui:WaitForReady" />
-          </ui:Target.WaitForReady>
-        </ui:Target>
-      </ui:ClickImage.Target>
-    </ui:ClickImage>
-    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe Coursera'" sap:VirtualizedContainerService.HintSize="477.6,156" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="[MouseButton.BTN_LEFT]">
-      <ui:ClickImage.CursorPosition>
-        <ui:CursorPosition Position="Center">
-          <ui:CursorPosition.OffsetX>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:CursorPosition.OffsetX>
-          <ui:CursorPosition.OffsetY>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:CursorPosition.OffsetY>
-        </ui:CursorPosition>
-      </ui:ClickImage.CursorPosition>
-      <ui:ClickImage.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABIAAAAdCAYAAACnmDyCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACiSURBVEhL7c7NEQIhDIZhWvAqP4GO6GYXC7UPKkC+OFEOK1m9yuEZJpB9Z02ttf3qfkkvK3RshXQrpJuGcs4q2Z2G4OhjMe6pIdAicCoEswicDsGnCHwVmlkh3b+EgveNQmg4IxFz1vLsneM3nKnfQ+xz2bZG/T3Y5z3uTIqRFxGQGGaBEJbd1b5D+84hwIygGf8GJ+BuhIB8CLdSOCBzImoPU7ONM3eUAVAAAAAASUVORK5CYII=" />
-      </ui:ClickImage.Image>
-      <ui:ClickImage.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="633ad153-5fff-4429-b71b-6e2cdd5a1061" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Coursera | Online Courses From Top Universities. Join for Free –*' /&gt;">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
-          <ui:Target.WaitForReady>
-            <InArgument x:TypeArguments="ui:WaitForReady" />
-          </ui:Target.WaitForReady>
-        </ui:Target>
-      </ui:ClickImage.Target>
-    </ui:ClickImage>
-    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe Coursera'" sap:VirtualizedContainerService.HintSize="477.6,156" sap2010:WorkflowViewState.IdRef="ClickImage_4" KeyModifiers="None" MouseButton="[MouseButton.BTN_LEFT]">
-      <ui:ClickImage.CursorPosition>
-        <ui:CursorPosition Position="Center">
-          <ui:CursorPosition.OffsetX>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:CursorPosition.OffsetX>
-          <ui:CursorPosition.OffsetY>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:CursorPosition.OffsetY>
-        </ui:CursorPosition>
-      </ui:ClickImage.CursorPosition>
-      <ui:ClickImage.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABIAAAAdCAYAAACnmDyCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACiSURBVEhL7c7NEQIhDIZhWvAqP4GO6GYXC7UPKkC+OFEOK1m9yuEZJpB9Z02ttf3qfkkvK3RshXQrpJuGcs4q2Z2G4OhjMe6pIdAicCoEswicDsGnCHwVmlkh3b+EgveNQmg4IxFz1vLsneM3nKnfQ+xz2bZG/T3Y5z3uTIqRFxGQGGaBEJbd1b5D+84hwIygGf8GJ+BuhIB8CLdSOCBzImoPU7ONM3eUAVAAAAAASUVORK5CYII=" />
-      </ui:ClickImage.Image>
-      <ui:ClickImage.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="633ad153-5fff-4429-b71b-6e2cdd5a1061" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Coursera | Online Courses From Top Universities. Join for Free –*' /&gt;">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
-          <ui:Target.WaitForReady>
-            <InArgument x:TypeArguments="ui:WaitForReady" />
-          </ui:Target.WaitForReady>
-        </ui:Target>
-      </ui:ClickImage.Target>
-    </ui:ClickImage>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="477.6,107.2" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="478.6666666666667,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -376,7 +301,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[add]" sap:VirtualizedContainerService.HintSize="477.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
+    <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[add]" sap:VirtualizedContainerService.HintSize="478.6666666666667,107.33333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
       <ui:UiElementExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="230fc0cb-e68e-476e-9ed0-dbe8e6073128" InformativeScreenshot="8a4d64496ae29fc3ca30a798f4a233a4" Selector="&lt;html app='chrome.exe' title='Coursera | Online Courses &amp;amp; Credentials From Top Educators. Join for Free' /&gt;&lt;webctrl class='alice-modal-body' parentid='rendered-content' tag='DIV' /&gt;">
           <ui:Target.TimeoutMS>
@@ -388,15 +313,15 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[add]" sap:VirtualizedContainerService.HintSize="477.6,502.4" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[add]" sap:VirtualizedContainerService.HintSize="478.6666666666667,505.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="400,219.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence sap:VirtualizedContainerService.HintSize="400,218" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="337.6,107.2" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="338,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -421,7 +346,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="400,104.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence sap:VirtualizedContainerService.HintSize="400,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -430,7 +355,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="477.6,107.2" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="478.6666666666667,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -452,7 +377,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  logout-btn'" sap:VirtualizedContainerService.HintSize="477.6,107.2" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  logout-btn'" sap:VirtualizedContainerService.HintSize="478.6666666666667,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -474,7 +399,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="477.6,133.6" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="w" KeyModifiers="Ctrl">
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="478.6666666666667,136.66666666666666" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="w" KeyModifiers="Ctrl">
       <ui:SendHotkey.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="0a7e30c9-f400-416c-8f45-e7493acef09e">
           <ui:Target.TimeoutMS>
@@ -486,7 +411,7 @@
         </ui:Target>
       </ui:SendHotkey.Target>
     </ui:SendHotkey>
-    <Assign sap:VirtualizedContainerService.HintSize="477.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="478.6666666666667,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_CourseraAccountPassword]</OutArgument>
       </Assign.To>
@@ -494,6 +419,6 @@
         <InArgument x:TypeArguments="x:String">[password]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="477.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;CreateCourseraAccount worflow has ended!&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.6666666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;CreateCourseraAccount worflow has ended!&quot;]" />
   </Sequence>
 </Activity>
