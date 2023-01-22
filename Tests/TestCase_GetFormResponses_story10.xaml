@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TestCase_GetFormResponses_story10" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1109.6,5307.2" sap2010:WorkflowViewState.IdRef="TestCase_GetFormResponses_story10_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TestCase_GetFormResponses_story10" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1031.2,5220" sap2010:WorkflowViewState.IdRef="TestCase_GetFormResponses_story10_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="70">
+    <scg:List x:TypeArguments="x:String" Capacity="38">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -106,7 +106,7 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TestCase_GetFormResponses_story10" sap:VirtualizedContainerService.HintSize="683.2,5242.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TestCase_GetFormResponses_story10" sap:VirtualizedContainerService.HintSize="683.2,5155.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="firstName" />
       <Variable x:TypeArguments="x:String" Name="lastName" />
@@ -118,18 +118,27 @@
       <Variable x:TypeArguments="x:String" Name="yearOfStudies" />
       <Variable x:TypeArguments="x:String" Name="group" />
       <Variable x:TypeArguments="x:String" Name="specialization" />
+      <Variable x:TypeArguments="x:String" Name="emailAddress" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="620.8,1288" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="620.8,1409.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_13">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[emailAddress]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">mariadutu.d@gmail.com</InArgument>
+        </Assign.Value>
+      </Assign>
       <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[firstName]</OutArgument>
@@ -211,19 +220,19 @@
         </Assign.Value>
       </Assign>
     </Sequence>
-    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="620.8,2775.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="620.8,2950.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="558.4,2509.6" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://docs.google.com/forms/d/e/1FAIpQLSdPM8ufST6jore2tuuslWKt2TW3u8BxkmvCGC1aMK2w_HVrpA/viewform">
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="558.4,2684.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://docs.google.com/forms/d/e/1FAIpQLSdPM8ufST6jore2tuuslWKt2TW3u8BxkmvCGC1aMK2w_HVrpA/viewform">
         <ui:OpenBrowser.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="524.8,2407.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence sap:VirtualizedContainerService.HintSize="524.8,2582.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -246,7 +255,7 @@
               </Sequence>
               <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'DIV'" sap:VirtualizedContainerService.HintSize="462.4,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                 <ui:UiElementExists.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="06205758-2061-44ff-aba5-aadf363939d3" InformativeScreenshot="798430a90de0bb1f87be2d9658051668" Selector="&lt;webctrl aria-role='heading' tag='DIV' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="06205758-2061-44ff-aba5-aadf363939d3" InformativeScreenshot="7dac6051cdbab6a29a5c424b1f46c54d" Selector="&lt;webctrl aria-role='heading' tag='DIV' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -256,9 +265,21 @@
                   </ui:Target>
                 </ui:UiElementExists.Target>
               </ui:UiElementExists>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="462.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_11" Text="[emailAddress]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3e34c42-e6c4-40fb-8cc8-99530ca3c69d" InformativeScreenshot="978f8743008bfd40c1c5e35599e00de7" Selector="&lt;webctrl tag='INPUT' type='text' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
               <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="462.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[firstName]">
                 <ui:TypeInto.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3e34c42-e6c4-40fb-8cc8-99530ca3c69d" InformativeScreenshot="1a3ab2e8bf3f7de1c14ced530d8973b3" Selector="&lt;webctrl tag='INPUT' type='text' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b3e34c42-e6c4-40fb-8cc8-99530ca3c69d" InformativeScreenshot="978f8743008bfd40c1c5e35599e00de7" Selector="&lt;webctrl aria-labelledby='i5' tag='INPUT' type='text' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -270,7 +291,7 @@
               </ui:TypeInto>
               <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="462.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[lastName]">
                 <ui:TypeInto.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="05fe455c-3f40-49db-972a-f45e4af2cf6f" InformativeScreenshot="594501d7c32aa955c6d379cf4a15da21" Selector="&lt;webctrl aria-labelledby='i5' tag='INPUT' type='text' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="05fe455c-3f40-49db-972a-f45e4af2cf6f" InformativeScreenshot="978f8743008bfd40c1c5e35599e00de7" Selector="&lt;webctrl aria-labelledby='i9' tag='INPUT' type='text' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -282,7 +303,7 @@
               </ui:TypeInto>
               <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="462.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[employeeId]">
                 <ui:TypeInto.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a318c202-90dd-46ff-8798-147dcd07e10a" InformativeScreenshot="c3de35224c5897f02e06c12d57634b10" Selector="&lt;webctrl aria-labelledby='i9' tag='INPUT' type='text' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a318c202-90dd-46ff-8798-147dcd07e10a" InformativeScreenshot="887ea1f7b93e14930b3fd816a8e0e1cc" Selector="&lt;webctrl aria-labelledby='i13' tag='INPUT' type='text' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -294,7 +315,7 @@
               </ui:TypeInto>
               <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TEXTAREA'" sap:VirtualizedContainerService.HintSize="462.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[address]">
                 <ui:TypeInto.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cfb18a1e-5c79-4f32-ba31-1d97baab398c" InformativeScreenshot="a1bd4b56e532fb2e6a084e25fe916f6b" Selector="&lt;webctrl tag='TEXTAREA' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cfb18a1e-5c79-4f32-ba31-1d97baab398c" InformativeScreenshot="a0eb285b2804fbc208a51169afb46da6" Selector="&lt;webctrl tag='TEXTAREA' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -306,7 +327,7 @@
               </ui:TypeInto>
               <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'DIV'" sap:VirtualizedContainerService.HintSize="462.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[specialization]">
                 <ui:TypeInto.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c08ac6c1-ebfd-41a5-b7c6-34cb4b8a777f" InformativeScreenshot="da78853caa7de8a6a8d55bc40f7dda83" Selector="&lt;webctrl aria-labelledby='i17' tag='INPUT' type='text' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c08ac6c1-ebfd-41a5-b7c6-34cb4b8a777f" InformativeScreenshot="23c9f444a3ce09fcc4b84745f31afbc5" Selector="&lt;webctrl aria-labelledby='i21' tag='INPUT' type='text' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -318,7 +339,7 @@
               </ui:TypeInto>
               <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="462.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="[group]">
                 <ui:TypeInto.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4d91943e-56a6-4ce8-937d-4ab757916a08" InformativeScreenshot="a3f3181141e743ed0cb171b9055b0ce3" Selector="&lt;webctrl aria-labelledby='i21' tag='INPUT' type='text' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4d91943e-56a6-4ce8-937d-4ab757916a08" InformativeScreenshot="23c9f444a3ce09fcc4b84745f31afbc5" Selector="&lt;webctrl aria-labelledby='i25' tag='INPUT' type='text' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -330,7 +351,7 @@
               </ui:TypeInto>
               <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="462.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_7" Text="[yearOfStudies]">
                 <ui:TypeInto.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="455bf7d8-88b1-4386-b64e-8779a362854f" InformativeScreenshot="818932959c22dd60f8baf5c1938cd9a9" Selector="&lt;webctrl aria-labelledby='i25' tag='INPUT' type='text' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="455bf7d8-88b1-4386-b64e-8779a362854f" InformativeScreenshot="23c9f444a3ce09fcc4b84745f31afbc5" Selector="&lt;webctrl aria-labelledby='i29' tag='INPUT' type='text' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -342,7 +363,7 @@
               </ui:TypeInto>
               <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'DIV'" sap:VirtualizedContainerService.HintSize="462.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_8" Text="[faculty]">
                 <ui:TypeInto.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="79ce3e33-dd5c-4056-9333-f88d5736c392" InformativeScreenshot="a93d8f4cec9e688fe1e0b12d56e8e0d7" Selector="&lt;webctrl aria-labelledby='i29' tag='INPUT' type='text' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="79ce3e33-dd5c-4056-9333-f88d5736c392" InformativeScreenshot="32d7fc5dfba98420d9b747a414afbc74" Selector="&lt;webctrl aria-labelledby='i33' tag='INPUT' type='text' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -354,7 +375,7 @@
               </ui:TypeInto>
               <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="462.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="[university]">
                 <ui:TypeInto.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c34a6e6e-46f4-4660-a893-e214489f320c" InformativeScreenshot="f12787801184df7989d0303b86ab6db6" Selector="&lt;webctrl aria-labelledby='i33' tag='INPUT' type='text' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c34a6e6e-46f4-4660-a893-e214489f320c" InformativeScreenshot="23c9f444a3ce09fcc4b84745f31afbc5" Selector="&lt;webctrl aria-labelledby='i37' tag='INPUT' type='text' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -366,7 +387,7 @@
               </ui:TypeInto>
               <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="462.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[nrOfHours]">
                 <ui:TypeInto.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="73fce08d-dbce-4444-9efa-514bc6843e93" InformativeScreenshot="1b344616f0c06c3ba485d591dd003191" Selector="&lt;webctrl aria-labelledby='i37' tag='INPUT' type='text' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="73fce08d-dbce-4444-9efa-514bc6843e93" InformativeScreenshot="23c9f444a3ce09fcc4b84745f31afbc5" Selector="&lt;webctrl aria-labelledby='i41' tag='INPUT' type='text' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -388,7 +409,7 @@
                   </ui:CursorPosition>
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4dc864f6-96ef-4646-9e48-33d03726ffe0" InformativeScreenshot="ce554bcc314480371cf4014a92a02773" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' tag='SPAN' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4dc864f6-96ef-4646-9e48-33d03726ffe0" InformativeScreenshot="d42d86000025918ee6b33bf2dc5b46f5" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' tag='SPAN' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -406,10 +427,11 @@
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_PracticeAccountEmail">practice1certificate.hr@gmail.com</InArgument>
           <InArgument x:TypeArguments="ss:SecureString" x:Key="in_PracticeAccountPass">[(new System.Net.NetworkCredential("", "practiceHR123.")).SecurePassword]</InArgument>
+          <OutArgument x:TypeArguments="x:Boolean" x:Key="out_ResponsesFound" />
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="620.8,987.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="620.8,603.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="practiceFormDT" />
         <Variable x:TypeArguments="x:Int32" Name="lastRowIndex" />
@@ -437,7 +459,7 @@
           <InArgument x:TypeArguments="sd:DataRow">[practiceFormDT.Rows(lastRowIndex)]</InArgument>
         </Assign.Value>
       </Assign>
-      <uta:VerifyExpression KeepScreenshots="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[lastRow.Item(&quot;First name&quot;).ToString.Equals(firstName) And lastRow.Item(&quot;Last name&quot;).ToString.Equals(lastName) And lastRow.Item(&quot;Employee id&quot;).ToString.Equals(employeeId) And lastRow.Item(&quot;Address&quot;).ToString.Equals(address) And lastRow.Item(&quot;Field of study(specialization)&quot;).ToString.Equals(specialization) And lastRow.Item(&quot;Group&quot;).ToString.Equals(Group) And lastRow.Item(&quot;Year of studies&quot;).ToString.Equals(yearOfStudies) And lastRow.Item(&quot;Faculty&quot;).ToString.Equals(faculty) And lastRow.Item(&quot;University&quot;).ToString.Equals(university) And lastRow.Item(&quot;Number of practical hours required&quot;).ToString.Equals(nrOfHours)]" sap:VirtualizedContainerService.HintSize="433.6,504" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+      <uta:VerifyExpression KeepScreenshots="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[lastRow.Item(&quot;E-mail address&quot;).ToString.Equals(emailAddress) and lastRow.Item(&quot;First name&quot;).ToString.Equals(firstName) And lastRow.Item(&quot;Last name&quot;).ToString.Equals(lastName) And lastRow.Item(&quot;Employee id&quot;).ToString.Equals(employeeId) And lastRow.Item(&quot;Address&quot;).ToString.Equals(address) And lastRow.Item(&quot;Field of study(specialization)&quot;).ToString.Equals(specialization) And lastRow.Item(&quot;Group&quot;).ToString.Equals(Group) And lastRow.Item(&quot;Year of studies&quot;).ToString.Equals(yearOfStudies) And lastRow.Item(&quot;Faculty&quot;).ToString.Equals(faculty) And lastRow.Item(&quot;University&quot;).ToString.Equals(university) And lastRow.Item(&quot;Number of practical hours required&quot;).ToString.Equals(nrOfHours)]" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
         <uta:VerifyExpression.AlternativeVerificationTitle>
           <InArgument x:TypeArguments="x:String" />
         </uta:VerifyExpression.AlternativeVerificationTitle>
