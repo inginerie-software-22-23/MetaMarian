@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.12.0.0",
-  "projectVersion": "2.0.3",
+  "projectVersion": "2.0.5",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -40,7 +40,23 @@
       "privateWorkflows": []
     },
     "processOptions": {
-      "ignoredFiles": []
+      "ignoredFiles": [
+        "Tests/ProcessTestCase.xaml",
+        "Tests/GetTransactionDataTestCase.xaml",
+        "Tests/InitAllApplicationsTestCase.xaml",
+        "Tests/InitAllSettingsTestCase.xaml",
+        "Tests/MainTestCase.xaml",
+        "Tests/TestCase_AssignMentor.xaml",
+        "Tests/TestCase_CheckContract_story4.xaml",
+        "Tests/TestCase_CreateAccountsForEmployee_story8.xaml",
+        "Tests/TestCase_FillPracticeCertificate_story11.xaml",
+        "Tests/TestCase_GetCourseSuggestion_story6.xaml",
+        "Tests/TestCase_GetEmployeeInfo_story2.xaml",
+        "Tests/TestCase_GetFormResponses_story10.xaml",
+        "Tests/TestCase_GetUsefulLinks_story6.xaml",
+        "Tests/TestCase_SendEmail_story2.xaml",
+        "Tests/TestCase_story3.xaml"
+      ]
     },
     "fileInfoCollection": [],
     "modernBehavior": true
