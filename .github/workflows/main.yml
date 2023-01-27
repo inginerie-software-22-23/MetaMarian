@@ -68,18 +68,21 @@ jobs:
       - name: Publish Nuget Package to our Orchestrator's process
         shell: pwsh
         run: ${{ github.workspace }}\scripts\UiPathDeploy.ps1 ${{ github.workspace }}\package ${{env.ORCH_URL}} ${{env.ORCH_TENANT}} -UserKey ${{env.ORCH_USER_KEY}} -account_name ${{env.ORCH_ACC_NAME}}
-   
-  test-uipath-published-package:
-    needs: publish-uipath-nuget-package
-    runs-on: windows-latest  
-    steps:
-      - name: Check out repository code
-        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-        uses: actions/checkout@v2 
-      - name: Download UiPath Artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: Artifacts
-      - name: Test the Package With Test Cases 
-        run: ${{ github.workspace }}\scripts\\UiPathRunTest.ps1  ${{env.ORCH_URL}} ${{env.ORCH_TENANT}} -UserKey ${{env.ORCH_USER_KEY}} -account_name ${{env.ORCH_ACC_NAME}} -project_path ${{ github.workspace }}\project.json  -result_path "C:\results.json" -out uipath
+ 
+#   This job is commented because we cannot automatically run the tests due to the fact that we do only have 
+#   UiPath Studio Community edition and we need a more sophisticated one for such thing.
+#
+#   test-uipath-published-package:
+#     needs: publish-uipath-nuget-package
+#     runs-on: windows-latest  
+#     steps:
+#       - name: Check out repository code
+#         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+#         uses: actions/checkout@v2 
+#       - name: Download UiPath Artifacts
+#         uses: actions/download-artifact@v2
+#         with:
+#           name: Artifacts
+#       - name: Test the Package With Test Cases 
+#         run: ${{ github.workspace }}\scripts\\UiPathRunTest.ps1  ${{env.ORCH_URL}} ${{env.ORCH_TENANT}} -UserKey ${{env.ORCH_USER_KEY}} -account_name ${{env.ORCH_ACC_NAME}} -project_path ${{ github.workspace }}\project.json  -result_path "C:\results.json" -out uipath
 
